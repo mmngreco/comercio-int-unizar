@@ -1,0 +1,1574 @@
+
+% Default to the notebook output style
+
+
+
+
+% Inherit from the specified cell style.
+
+
+
+
+
+\documentclass[12pt]{book}
+
+
+
+    \usepackage[T1]{fontenc}
+    % Nicer default font than Computer Modern for most use cases
+    \usepackage{palatino}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics
+                         % to support a larger range
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+
+
+
+
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+
+
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+
+\title{Análisis del comercio exterior de Chipre}
+
+
+
+\author{Maximiliano Greco}
+
+
+
+    % Pygments definitions
+
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+
+
+
+    \begin{document}
+
+
+    \maketitle
+
+
+\chapter{PRESENTACIÓN DEL PAIS}\label{presentaciuxf3n-del-pais}
+
+CHIPRE, UE
+
+\begin{itemize}
+\tightlist
+\item
+  Situación, historia, recursos naturales, población, moneda.
+\item
+  Grupos económicos a los que pertenece, instituciones internacionales
+  de las que forma parte.
+\item
+  Rasgos económicos: sectores relevantes en la producción y comercio
+  exterior, evolución macroeconómica comparada, relación real de
+  intercambio, políticas económicas.
+\end{itemize}
+
+    Para los códigos de los paises:
+
+Paises miembros: -
+https://www.wikiwand.com/en/Member\_state\_of\_the\_European\_Union
+
+CODIGOS PAISES FUENTE: -
+http://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country\_codes
+
+\begin{itemize}
+\tightlist
+\item
+  http://wits.worldbank.org/wits/wits/witshelp/Content/Codes/Country\_Codes.htm
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{c+c1}{\PYZsh{} coordenadas del centro de chipre para anotar}
+         \PY{n}{cy} \PY{o}{=} \PY{n}{geodf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{CY}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{geometry}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{centroid}
+\end{Verbatim}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Gráfico los 28 paises miembros de la UE y situación geográfica de
+Chipre.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{fs} \PY{o}{=} \PY{l+m+mi}{7}
+         \PY{n}{fs} \PY{o}{=} \PY{p}{(}\PY{n}{fs}\PY{p}{,} \PY{n}{fs}\PY{p}{)}
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{n}{fs}\PY{p}{)}
+         \PY{n}{geodf}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{1.}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{}2E9AFE}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{white}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{)}
+         \PY{n}{geodf}\PY{p}{[}\PY{n}{geodf}\PY{o}{.}\PY{n}{CNTR\PYZus{}ID} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{CY}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{err}{↔}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{15}\PY{p}{,} \PY{l+m+mi}{35}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mi}{25}\PY{p}{,} \PY{l+m+mi}{70}\PY{p}{)}
+
+         \PY{n}{ax}\PY{o}{.}\PY{n}{annotate}\PY{p}{(}\PY{err}{↔}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{n}{bottom}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{left}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{err}{↔}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../imgs/mapa.eps}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}iches}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{1800}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_42_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: Eurostat; Elaboración propia}
+
+    \section{HISTORIA}\label{historia}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{c+c1}{\PYZsh{} fuentes de información cualitativa:↔}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}22}]:} <IPython.lib.display.IFrame at 0x1208a5710>
+\end{Verbatim}
+
+    \section{RELACIÓN REAL DE
+INTERCAMBIO}\label{relaciuxf3n-real-de-intercambio}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{c+c1}{\PYZsh{} RRI}
+
+         \PY{n}{indices} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}
+         \PY{n}{rri} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{n}{indices}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}
+         \PY{n}{rri}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{n}{inplace}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{rri}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{xreal}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{n}{rri}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{rri}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{mreal}\PY{p}{,} \PY{n}{m} \PY{o}{=} \PY{n}{rri}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{rri}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}
+
+         \PY{n}{rri}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ivux}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x} \PY{o}{/} \PY{n}{xreal}
+         \PY{n}{rri}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ivum}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{m} \PY{o}{/} \PY{n}{mreal}
+         \PY{n}{rri}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RRI}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{rri}\PY{o}{.}\PY{n}{ivux} \PY{o}{/} \PY{n}{rri}\PY{o}{.}\PY{n}{ivum} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{rri}\PY{o}{.}\PY{n}{fillna}\PY{p}{(}\PY{n}{value}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{rri}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+
+         \PY{c+c1}{\PYZsh{} print(rri.to\PYZus{}csv(decimal=\PYZdq{},\PYZdq{}))}
+
+         \PY{n}{gs} \PY{o}{=} \PY{n}{gridspec}\PY{o}{.}\PY{n}{GridSpec}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}
+         \PY{n}{fig}\PY{p}{,} \PY{p}{(}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{)} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+
+         \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n}{ax2} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{n}{ax1}\PY{p}{)}
+
+         \PY{n}{dw} \PY{o}{=} \PY{n}{rri}\PY{o}{.}\PY{n}{RRI}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{,} \PY{n}{marker}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{.}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{dw}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{hist}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax2}\PY{p}{,} \PY{n}{orientation}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{horizontal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{u\PYZdq{}}\PY{l+s+s2}{Año}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{u\PYZdq{}}\PY{l+s+s2}{Frecuencia}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{labs} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n}{ax2}\PY{o}{.}\PY{n}{get\PYZus{}xticks}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{labs}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{60}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Media}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{r}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mediana}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+         \PY{n}{xtxt} \PY{o}{=} \PY{l+m+mf}{0.25}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{xtxt}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mf}{0.15}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n+nb}{round}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{text}\PY{p}{(}
+             \PY{n}{x}\PY{o}{=}\PY{n}{xtxt}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PY{l+m+mf}{0.15}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n+nb}{round}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{median}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{9}\PY{p}{)}
+
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../imgs/rri\PYZus{}0.eps}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}iches}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{1800}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{}plt.ylim(0,111)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_47_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+\chapter{EVOLUCIÓN DEL COMERCIO Y SUS DETERMINANTES
+MACROECONÓMICOS}\label{evoluciuxf3n-del-comercio-y-sus-determinantes-macroeconuxf3micos}
+
+    \section{INDICADORES}\label{indicadores}
+
+BALANZA COMERCIAL
+
+\[X - M\]
+
+TASA DE COBERTURA
+
+\[\frac{X}{M}100\]
+
+PENETRACIÓN DE LAS IMPORTACIONES
+
+\[\frac{M}{\text{PIB} + M - X} 100\]
+
+GRADO DE APERTURA
+
+\[\frac{X+M}{\text{PIB}} 100\]
+
+PROPENSIÓN EXPORTADORA
+
+\[\frac{X}{\text{PIB}} 100\]
+
+    \section{EVOLUCIÓN DEL COMERCIO}\label{evoluciuxf3n-del-comercio}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{cuadro} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{pib} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}
+         \PY{n}{m} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}
+         \PY{n}{x} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{mreal} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+         \PY{n}{xreal} \PY{o}{=} \PY{n}{wdi\PYZus{}chipre}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+
+         \PY{c+c1}{\PYZsh{} comprobamos que las variables coinciden}
+         \PY{k}{for} \PY{n}{v} \PY{o+ow}{in} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pib m x mreal xreal}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{v}\PY{p}{,} \PY{n+nb}{globals}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{n}{v}\PY{p}{]}\PY{o}{.}\PY{n}{name}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}t}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Importaciones de BBSS (moneda local)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{m}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Exportaciones de BBSS (moneda local)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento nominal de las importaciones (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{m}\PY{o}{.}\PY{n}{pct\PYZus{}change}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento nominal de las exportaciones (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x}\PY{o}{.}\PY{n}{pct\PYZus{}change}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento real de las importaciones (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{mreal}\PY{o}{.}\PY{n}{pct\PYZus{}change}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento real de las exportaciones (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{xreal}\PY{o}{.}\PY{n}{pct\PYZus{}change}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Saldo comercial (LCU)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x} \PY{o}{\PYZhy{}} \PY{n}{m}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Saldo Comercial (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{ PIB)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{n}{m}\PY{p}{)} \PY{o}{/} \PY{n}{pib} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tasa de Cobertura (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x} \PY{o}{/} \PY{n}{m} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tasa de Apertura (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{x} \PY{o}{+} \PY{n}{m}\PY{p}{)} \PY{o}{/} \PY{n}{pib} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Penetración de las Importaciones (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{m} \PY{o}{/} \PY{p}{(}\PY{n}{pib} \PY{o}{+} \PY{n}{m} \PY{o}{\PYZhy{}} \PY{n}{x}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{cuadro}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Propensión Exportadora}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{x} \PY{o}{/} \PY{n}{pib} \PY{o}{*} \PY{l+m+mi}{100}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+pib	PIB (corriente LCU)
+m	Importaciones de bienes y servicios (corriente LCU)
+x	Exportaciones de bienes y servicios (corriente LCU)
+mreal	Importaciones de bienes y servicios (constante LCU)
+xreal	Exportaciones de bienes y servicios (constante LCU)
+
+    \end{Verbatim}
+
+    \subsection{NOMINAL}\label{nominal}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+Valor de los últimos 10 años de las variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{cuadro}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{n}{how}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{all}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{cuadro}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}25}]:}
+
+    \centering{\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+{} &  Importaciones de BBSS (moneda local) &  Exportaciones de BBSS (moneda local) &  Crecimiento nominal de las importaciones (\%) &  Crecimiento nominal de las exportaciones (\%) &  Crecimiento real de las importaciones (\%) &  Crecimiento real de las exportaciones (\%) &  Saldo comercial (LCU) &  Saldo Comercial (\% PIB) &  Tasa de Cobertura (\%) &  Tasa de Apertura (\%) &  Penetración de las Importaciones (\%) &  Propensión Exportadora \\
+date &                                       &                                       &                                               &                                               &                                            &                                            &                        &                          &                        &                       &                                       &                         \\
+\midrule
+2005 &                          8.333840e+09 &                          8.254850e+09 &                                          5.49 &                                          4.72 &                                       1.57 &                                       2.05 &          -7.899000e+07 &                    -0.54 &                  99.05 &                112.92 &                                 56.42 &                   56.19 \\
+2006 &                          9.019310e+09 &                          8.549730e+09 &                                          8.23 &                                          3.57 &                                       5.70 &                                       1.27 &          -4.695800e+08 &                    -2.97 &                  94.79 &                110.94 &                                 55.31 &                   53.99 \\
+2007 &                          1.015953e+10 &                          9.326470e+09 &                                         12.64 &                                          9.08 &                                      10.46 &                                       5.28 &          -8.330600e+08 &                    -4.81 &                  91.80 &                112.45 &                                 55.94 &                   53.82 \\
+2008 &                          1.144042e+10 &                          9.417380e+09 &                                         12.61 &                                          0.97 &                                       7.74 &                                      -1.72 &          -2.023040e+09 &                   -10.78 &                  82.32 &                111.13 &                                 55.02 &                   50.18 \\
+2009 &                          9.550060e+09 &                          8.721350e+09 &                                        -16.52 &                                         -7.39 &                                     -16.05 &                                      -7.28 &          -8.287100e+08 &                    -4.50 &                  91.32 &                 99.18 &                                 49.61 &                   47.34 \\
+2010 &                          1.015758e+10 &                          9.095460e+09 &                                          6.36 &                                          4.29 &                                       4.52 &                                       2.63 &          -1.062120e+09 &                    -5.57 &                  89.54 &                101.00 &                                 50.47 &                   47.71 \\
+2011 &                          1.031901e+10 &                          9.653110e+09 &                                          1.59 &                                          6.13 &                                      -0.62 &                                       4.21 &          -6.659000e+08 &                    -3.42 &                  93.55 &                102.49 &                                 51.20 &                   49.54 \\
+2012 &                          1.002806e+10 &                          9.653370e+09 &                                         -2.82 &                                          0.00 &                                      -4.60 &                                      -1.66 &          -3.746900e+08 &                    -1.93 &                  96.26 &                101.39 &                                 50.68 &                   49.73 \\
+2013 &                          8.759650e+09 &                          9.209850e+09 &                                        -12.65 &                                         -4.59 &                                     -13.61 &                                      -4.99 &           4.502000e+08 &                     2.48 &                 105.14 &                 99.18 &                                 49.58 &                   50.83 \\
+2014 &                          9.220300e+09 &                          9.704100e+09 &                                          5.26 &                                          5.37 &                                       8.07 &                                       5.72 &           4.838000e+08 &                     2.76 &                 105.25 &                108.10 &                                 54.17 &                   55.43 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: World Bank API; Elaboración propia}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+Evolución del crecimiento nominal de las importaciones y exportaciones
+de los últimos 15 años con los datos disponibles.
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{dw} \PY{o}{=} \PY{n}{cuadro}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{indices}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
+         \PY{n}{dw}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{l+m+mi}{15}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}26}]:}
+
+    \centering{\begin{tabular}{lrrrr}
+\toprule
+{} &  Importaciones de BBSS (moneda local) &  Exportaciones de BBSS (moneda local) &  Crecimiento nominal de las exportaciones (\%) &  Crecimiento real de las importaciones (\%) \\
+date &                                       &                                       &                                               &                                            \\
+\midrule
+2000 &                          7.155010e+09 &                          7.412550e+09 &                                     13.811782 &                                   9.213297 \\
+2001 &                          7.265740e+09 &                          7.787330e+09 &                                      5.056020 &                                  -0.191008 \\
+2002 &                          7.273030e+09 &                          7.411900e+09 &                                     -4.821036 &                                  -0.357282 \\
+2003 &                          7.224510e+09 &                          7.419710e+09 &                                      0.105371 &                                  -0.973851 \\
+2004 &                          7.900090e+09 &                          7.882900e+09 &                                      6.242697 &                                   6.945780 \\
+2005 &                          8.333840e+09 &                          8.254850e+09 &                                      4.718441 &                                   1.569769 \\
+2006 &                          9.019310e+09 &                          8.549730e+09 &                                      3.572203 &                                   5.702540 \\
+2007 &                          1.015953e+10 &                          9.326470e+09 &                                      9.084965 &                                  10.462966 \\
+2008 &                          1.144042e+10 &                          9.417380e+09 &                                      0.974753 &                                   7.742355 \\
+2009 &                          9.550060e+09 &                          8.721350e+09 &                                     -7.390909 &                                 -16.049561 \\
+2010 &                          1.015758e+10 &                          9.095460e+09 &                                      4.289588 &                                   4.520371 \\
+2011 &                          1.031901e+10 &                          9.653110e+09 &                                      6.131081 &                                  -0.618305 \\
+2012 &                          1.002806e+10 &                          9.653370e+09 &                                      0.002693 &                                  -4.599195 \\
+2013 &                          8.759650e+09 &                          9.209850e+09 &                                     -4.594458 &                                 -13.606413 \\
+2014 &                          9.220300e+09 &                          9.704100e+09 &                                      5.366537 &                                   8.066896 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: World Bank API; Elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Análisis de la evolución de las importaciones y exportaciones nominales,
+usando el crecimiento interanual de ambas variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{gs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{GridSpec}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{gs1} \PY{o}{=} \PY{n}{gs}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{gs2} \PY{o}{=} \PY{n}{gs}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{indices} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+         \PY{n}{dw} \PY{o}{=} \PY{n}{cuadro}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{indices}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
+         \PY{n}{dw}\PY{o}{.}\PY{n}{index} \PY{o}{=} \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{]}
+
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs1}\PY{p}{)}
+         \PY{n}{ax2} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs2}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{n}{ax1}\PY{p}{)}
+         \PY{n}{axs} \PY{o}{=} \PY{p}{[}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{]}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{,} \PY{n}{marker}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{o}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{dw}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento del saldo exterior}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{ax}\PY{o}{=}\PY{n}{ax2}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+         \PY{k}{for} \PY{n}{ax} \PY{o+ow}{in} \PY{n}{axs}\PY{p}{:}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{grey}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{u\PYZdq{}}\PY{l+s+s2}{Año}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{12}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}
+                 \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{if} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]} \PY{k}{else} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{]}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../imgs/ev\PYZus{}nominal.eps}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}iches}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{1800}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_61_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+
+Tanto las importaciones cómo las exportaciones se han visto afectadas
+nominalmente en 2008 por la crisis económica, se puede ver en la caída
+de éstas en el gráfico. En los últimos 10 años, el crecimiento de ambas
+variables ha estado girando en torno al 2\% siendo las exportaciones
+ligeramente superior a las importaciones haciendo que el crecimiento del
+saldo exterior sea positivo pero muy discreto de magnitud de un 0.2\%.
+Es interesante que ver que sólo el 20\% de los años el crecimiento de
+las exportaciones presentó valores negativos (30\% para las
+importaciones) esto se debe principalmente, cómo veremos en el siguiente
+gráfico, a la inflación.
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                                     \PY{n}{layout}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}
+                                     \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,}
+                                     \PY{n}{grid}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}
+                                     \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{suptitle}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Frecuencia relativa: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{1: Crecimiento positivo }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{0: Crecimiento negativo}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mf}{1.23}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                              \PY{n}{layout}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}
+                              \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,}
+                              \PY{n}{grid}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}
+                              \PY{n}{cumulative}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                              \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{suptitle}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Frecuencia acumulda}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mf}{1.01}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_65_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_65_1.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{name}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{name}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_68_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{sns}\PY{o}{.}\PY{n}{kdeplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{kdeplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/mmngreco/anaconda3/lib/python3.5/site-packages/statsmodels/nonparametric/kdetools.py:20: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  y = X[:m/2+1] + np.r\_[0,X[m/2+1:],0]*1j
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_71_1.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{sns}\PY{o}{.}\PY{n}{jointplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{hex}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_74_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subsection{REAL}\label{real}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{gs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{GridSpec}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{gs1} \PY{o}{=} \PY{n}{gs}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{gs2} \PY{o}{=} \PY{n}{gs}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{indices} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}
+         \PY{n}{dw} \PY{o}{=} \PY{n}{cuadro}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{indices}\PY{p}{]}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}
+         \PY{n}{dw}\PY{o}{.}\PY{n}{index} \PY{o}{=} \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{]}
+
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs1}\PY{p}{)}
+         \PY{n}{ax2} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{n}{gs2}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{n}{ax1}\PY{p}{)}
+         \PY{n}{axs} \PY{o}{=} \PY{p}{[}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{]}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{,} \PY{n}{marker}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{o}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{dw}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Crecimiento del saldo exterior}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{ax}\PY{o}{=}\PY{n}{ax2}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+         \PY{k}{for} \PY{n}{ax} \PY{o+ow}{in} \PY{n}{axs}\PY{p}{:}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{grey}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{u\PYZdq{}}\PY{l+s+s2}{Año}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{12}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}
+                 \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{if} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]} \PY{k}{else} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dw}\PY{o}{.}\PY{n}{index}\PY{p}{]}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../imgs/ev\PYZus{}real.eps}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}iches}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{1800}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_78_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}33}]:}
+
+    \centering{\begin{tabular}{lrrr}
+\toprule
+{} &  Crecimiento real de las importaciones (\%) &  Crecimiento real de las exportaciones (\%) &  Crecimiento del saldo exterior \\
+\midrule
+count &                                      10.00 &                                      10.00 &                           10.00 \\
+mean  &                                       0.32 &                                       0.55 &                            0.23 \\
+std   &                                       9.15 &                                       4.37 &                            6.04 \\
+min   &                                     -16.05 &                                      -7.28 &                           -9.47 \\
+25\%   &                                      -3.60 &                                      -1.71 &                           -3.91 \\
+50\%   &                                       3.05 &                                       1.66 &                           -0.70 \\
+75\%   &                                       7.23 &                                       3.82 &                            4.36 \\
+max   &                                      10.46 &                                       5.72 &                            8.77 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{c+c1}{\PYZsh{} coefciente de variación}
+         \PY{n}{\PYZus{}}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{]} \PY{o}{/} \PY{n}{\PYZus{}}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{p}{;}
+\end{Verbatim}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{n}{dw}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}35}]:}
+
+    \centering{\begin{tabular}{lrrr}
+\toprule
+{} &  Crecimiento real de las importaciones (\%) &  Crecimiento real de las exportaciones (\%) &  Crecimiento del saldo exterior \\
+\midrule
+1976 &                                  39.466085 &                                  65.240980 &                       25.774896 \\
+1977 &                                  27.573719 &                                  22.311330 &                       -5.262389 \\
+1978 &                                   5.616385 &                                   6.140095 &                        0.523710 \\
+1979 &                                  16.778651 &                                  20.752592 &                        3.973941 \\
+1980 &                                   5.786625 &                                  10.813957 &                        5.027332 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{name}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{name}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_88_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}37}]:} \PY{n}{sns}\PY{o}{.}\PY{n}{kdeplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{kdeplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{upper right}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}to\PYZus{}anchor}\PY{o}{=}\PY{p}{(}\PY{l+m+mf}{1.2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/mmngreco/anaconda3/lib/python3.5/site-packages/statsmodels/nonparametric/kdetools.py:20: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  y = X[:m/2+1] + np.r\_[0,X[m/2+1:],0]*1j
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_91_1.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{n}{pd}\PY{o}{.}\PY{n}{crosstab}\PY{p}{(}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{1}\PY{p}{,} \PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{margins}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}38}]:}
+
+    \centering{\begin{tabular}{lrrr}
+\toprule
+Crecimiento real de las exportaciones (\%) &   0 &   1 &  All \\
+Crecimiento real de las importaciones (\%) &     &     &      \\
+\midrule
+0                                         &   8 &   2 &   10 \\
+1                                         &   2 &  27 &   29 \\
+All                                       &  10 &  29 &   39 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}39}]:} \PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{,} \PY{p}{:}\PY{p}{]} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}\PY{o}{.}\PY{n}{hist}\PY{p}{(}
+             \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{layout}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,} \PY{n}{grid}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+         \PY{n}{ttl} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}\PYZdq{}\PYZdq{}}\PY{l+s+s2}{Frecuencia relativa:}
+         \PY{l+s+s2}{1: Crecimiento positivo}
+         \PY{l+s+s2}{0: Crecimiento negativo}\PY{l+s+s2}{\PYZdq{}\PYZdq{}\PYZdq{}}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{suptitle}\PY{p}{(}\PY{n}{ttl}\PY{p}{,}
+                      \PY{n}{y}\PY{o}{=}\PY{l+m+mf}{1.07}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}
+             \PY{n}{normed}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{layout}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,} \PY{n}{grid}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,} \PY{n}{cumulative}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,} \PY{n}{histtype}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{stepfilled}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{suptitle}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Frecuencia acumulda}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+m+mf}{1.01}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_97_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_97_1.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    El crecimiento real de las exportaciones y de las importaciones, para el
+período comprendido entre 2005 y 2014, se ha mantenido entorno al 0.55\%
+y 0.32\% respectivamente, unos niveles muy bajos, que coinciden con la
+crisis económica de 2008, a partir de dicha fecha el crecimiento de las
+exportaciones caen y no acaban de tener un crecimiento sostenido, el
+caso de las importaciones es símilar pero con unas caídas más
+pronunciadas, lo que ha hecho que el crecimiento del saldo exterior se
+mantenga en valores cercanos al 0.23\% de media.
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}40}]:} \PY{n}{sns}\PY{o}{.}\PY{n}{jointplot}\PY{p}{(}\PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{dw}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{hex}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_101_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: World Bank API; elaboración propia}
+
+    \section{DETERMINANTES
+MACROECONÓMICOS:}\label{determinantes-macroeconuxf3micos}
+
+\begin{itemize}
+\tightlist
+\item
+  evolución del PIB
+\item
+  Precios relativos
+\item
+  Tipo de cambio
+\end{itemize}
+
+\chapter{DISTRIBUCIÓN GEOGRÁFICA DE M Y
+X}\label{distribuciuxf3n-geogruxe1fica-de-m-y-x}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}41}]:} \PY{c+c1}{\PYZsh{} calculamos los pesos}
+         \PY{n}{Mgeo}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2007}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{m2007} \PY{o}{/} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{m2007}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{Mgeo}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2011}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{m2011} \PY{o}{/} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{m2011}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{n}{Xgeo}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2007}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{x2007} \PY{o}{/} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{x2007}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{Xgeo}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2011}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{x2011} \PY{o}{/} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{x2011}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{c+c1}{\PYZsh{} comprobamos}
+         \PY{n}{Mgeo}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+
+         \PY{c+c1}{\PYZsh{} ordenamos por pesos}
+         \PY{n}{Mgeo}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2007 peso2011}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{Xgeo}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{peso2007 peso2011}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+         \PY{c+c1}{\PYZsh{} nos quemos con los mas representativos}
+         \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{p}{:}\PY{p}{]} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         \PY{n}{Xgeo} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{6}\PY{p}{,}\PY{p}{:}\PY{p}{]}
+         \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RESTO}\PY{l+s+s2}{\PYZdq{}}
+
+         \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{p}{:}\PY{p}{]} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         \PY{n}{Mgeo} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{6}\PY{p}{,}\PY{p}{:}\PY{p}{]}
+         \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RESTO}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}42}]:} \PY{c+c1}{\PYZsh{} traducimos los nombres}
+         \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{translator}\PY{o}{.}\PY{n}{translate}\PY{p}{)}
+         \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{translator}\PY{o}{.}\PY{n}{translate}\PY{p}{)}
+\end{Verbatim}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}43}]:} \PY{n}{Mgeo}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}43}]:}
+
+    \centering{\begin{tabular}{llrrrr}
+\toprule
+{} &         pais &  m2007 &  m2011 &   peso2007 &   peso2011 \\
+\midrule
+1 &       GRECIA &   1530 &   1862 &  17.493711 &  21.380181 \\
+2 &       ITALIA &    884 &    709 &  10.107478 &   8.141004 \\
+3 &  REINO UNIDO &    849 &    768 &   9.707295 &   8.818464 \\
+4 &     ALEMANIA &    811 &    707 &   9.272810 &   8.118039 \\
+5 &   DE ISRAEL. &    563 &    888 &   6.437228 &  10.196349 \\
+7 &        RESTO &   4672 &   4663 &  53.418706 &  53.542313 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}44}]:} \PY{c+c1}{\PYZsh{} graficos}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{Mgeo}\PY{o}{.}\PY{n}{pais}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_111_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}45}]:} \PY{n}{ax1}\PY{p}{,} \PY{n}{ax2} \PY{o}{=} \PY{n}{Mgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pie}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                                          \PY{n}{subplots}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                                          \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,}
+                                          \PY{n}{labels}\PY{o}{=}\PY{n}{Mgeo}\PY{o}{.}\PY{n}{pais}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+                                          \PY{n}{legend}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}
+                                          \PY{n}{autopct}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+si}{\PYZpc{}1.1f}\PY{l+s+si}{\PYZpc{}\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                                          \PY{n}{startangle}\PY{o}{=}\PY{l+m+mi}{120}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_114_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+    \paragraph{CUADRO}\label{cuadro}
+
+blabla
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}46}]:} \PY{n}{Xgeo}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}46}]:}
+
+    \centering{\begin{tabular}{llrrrr}
+\toprule
+{} &         pais &  x2007 &  x2011 &   peso2007 &   peso2011 \\
+\midrule
+1  &       GRECIA &    295 &    465 &  19.945909 &  23.833931 \\
+2  &  PARA BUQUES &    233 &    356 &  15.753888 &  18.247053 \\
+3  &  REINO UNIDO &    206 &    174 &  13.928330 &   8.918503 \\
+4  &     ALEMANIA &     91 &     94 &   6.152806 &   4.818042 \\
+12 &      RUMANÍA &     43 &     19 &   2.907370 &   0.973860 \\
+6  &        RESTO &    611 &    843 &  41.311697 &  43.208611 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}47}]:} \PY{n}{ax} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{Xgeo}\PY{o}{.}\PY{n}{pais}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_120_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+    \subparagraph{FIGURA}\label{figura}
+
+Frecuencias de crecimiento positivo vs negativo de las importaciones y
+exportaciones nominales, usando el crecimiento interanual de ambas
+variables.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}48}]:} \PY{n}{ax1}\PY{p}{,} \PY{n}{ax2} \PY{o}{=} \PY{n}{Xgeo}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pie}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                                          \PY{n}{subplots}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+                                          \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,}
+                                          \PY{n}{labels}\PY{o}{=}\PY{n}{Xgeo}\PY{o}{.}\PY{n}{pais}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+                                          \PY{n}{legend}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}
+                                          \PY{n}{autopct}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+si}{\PYZpc{}1.1f}\PY{l+s+si}{\PYZpc{}\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                                          \PY{n}{startangle}\PY{o}{=}\PY{l+m+mi}{120}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_123_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \emph{Fuente: PC-TAS; elaboración propia}
+
+\chapter{COMPETITIVIDAD PRECIO O
+COSTE}\label{competitividad-precio-o-coste}
+
+\begin{itemize}
+\tightlist
+\item
+  Indices de tipo de cambio efectivo real
+\item
+  Tipo de cambio oficial
+\item
+  Tasa de inflación
+\end{itemize}
+
+\chapter{COMPETITIVIDAD ESTRUCTURAL}\label{competitividad-estructural}
+
+\chapter{ESPECIALIZACIÓN COMERCIAL}\label{especializaciuxf3n-comercial}
+
+\section{INDICE DE DEPENDENCIA}\label{indice-de-dependencia}
+
+Para todo país \(h\) y el sector \(i\)
+
+\[IDep^h_i = \frac{\frac{M^h_i}{\sum_i M^h_i}}{\frac{\sum_h M^h_i}{\sum_h \sum_i M^h_i}} 100\]
+
+\section{INDICE DE
+ESPECIALIZACIÓN}\label{indice-de-especializaciuxf3n}
+
+\[IEsp^h_i = \frac{\frac{X^h_i}{\sum_i X^h_i}}{\frac{\sum_h X^h_i}{\sum_h \sum_i X^h_i}} 100\]
+
+\section{SALDO COMERCIAL RELATIVO}\label{saldo-comercial-relativo}
+
+\[SCR_i = \frac{X_i - M_i}{X_i + M_i} 100\]
+
+\subsection{IMPORTANCIA RELATIVA DEL SECTOR EN LAS IMPORTACIONES Y
+EXPORTACIONES.}\label{importancia-relativa-del-sector-en-las-importaciones-y-exportaciones.}
+
+\[IRX_i = \frac{X_i}{\sum_i X_i}\]
+
+\[IRM_i = \frac{M_i}{\sum_i M_i}\]
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}49}]:} \PY{n}{data}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}49}]:}
+
+    \centering{\begin{tabular}{llrrrr}
+\toprule
+{} & code &  xchipre11 &  mchipre11 &  xue11 &  mue11 \\
+\midrule
+0 &  1.0 &        1.0 &          2 &  12499 &   9761 \\
+1 &  2.0 &       14.0 &         65 &  55064 &  47434 \\
+2 &  3.0 &       28.0 &         60 &  21887 &  37904 \\
+3 &  4.0 &       82.0 &         90 &  53020 &  42436 \\
+4 &  5.0 &        2.0 &          2 &   3423 &   4114 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}50}]:} \PY{n}{res} \PY{o}{=} \PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+         \PY{n}{tot} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         \PY{n}{f} \PY{o}{=} \PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{code}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{code}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{f}\PY{p}{)}
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{mchipre11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{mchipre11}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{mue11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{mue11}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{iesp}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{xchipre11}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{xue11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{xue11}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{\PYZhy{}} \PY{n}{data}\PY{o}{.}\PY{n}{mchipre11}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{+} \PY{n}{data}\PY{o}{.}\PY{n}{mchipre11}\PY{p}{)} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{mchipre11} \PY{o}{/} \PY{n}{tot}\PY{o}{.}\PY{n}{mchipre11} \PY{o}{*} \PY{l+m+mi}{100}
+
+         \PY{n}{a} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{+} \PY{n}{data}\PY{o}{.}\PY{n}{mchipre11}
+         \PY{n}{b} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{xchipre11} \PY{o}{\PYZhy{}} \PY{n}{data}\PY{o}{.}\PY{n}{mchipre11}\PY{p}{)}
+
+         \PY{n}{res}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{igl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{p}{(}\PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b}\PY{p}{)} \PY{o}{/} \PY{n}{a} \PY{o}{*} \PY{l+m+mi}{100}
+         \PY{n}{res}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{res}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+         \PY{n}{res}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}50}]:}
+
+    \centering{\begin{tabular}{llrrrrrr}
+\toprule
+{} & code &    idep &    iesp &    scr &   irx &   irm &     igl \\
+\midrule
+0 &    1 &   14.18 &   24.10 & -33.33 &  0.05 &  0.02 &   66.67 \\
+1 &    2 &   94.82 &   76.57 & -64.56 &  0.72 &  0.75 &   35.44 \\
+2 &    3 &  109.54 &  385.29 & -36.36 &  1.43 &  0.69 &   63.64 \\
+3 &    4 &  146.76 &  465.79 &  -4.65 &  4.19 &  1.03 &   95.35 \\
+4 &    5 &   33.64 &  175.97 &   0.00 &  0.10 &  0.02 &  100.00 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \section{PRESENTACIÓN DE LOS
+DATOS:}\label{presentaciuxf3n-de-los-datos}
+
+Para los sectores reelevantes que cumplen cnd1 \& cnd2:
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+& I.DEP \textgreater{} 100 & I.ESP \textgreater{} 100\tabularnewline
+\midrule
+\endhead
+SCR \textgreater{} 0 & c1 = cnd3 \& cnd4 & c2 = cnd3 \&
+cnd5\tabularnewline
+SCR \textless{} 0 & c3 = cnd3 - 1 \& cnd4 & c4 = cnd3-1 \&
+cnd5\tabularnewline
+\bottomrule
+\end{longtable}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}51}]:} \PY{c+c1}{\PYZsh{} condiciones para seleccionar los sectores mas importantes}
+         \PY{n}{cnd1} \PY{o}{=} \PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{irx} \PY{o}{\PYZgt{}} \PY{l+m+mf}{1.45}\PY{p}{)}
+         \PY{n}{cnd2} \PY{o}{=} \PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{irm} \PY{o}{\PYZgt{}} \PY{l+m+mf}{1.45}\PY{p}{)}
+
+         \PY{c+c1}{\PYZsh{} condiciones de los cuadrantes}
+         \PY{n}{cnd3} \PY{o}{=} \PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{scr} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{cnd4} \PY{o}{=} \PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{idep} \PY{o}{\PYZgt{}} \PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{cnd5} \PY{o}{=} \PY{p}{(}\PY{n}{res}\PY{o}{.}\PY{n}{iesp} \PY{o}{\PYZgt{}} \PY{l+m+mi}{100}\PY{p}{)}
+\end{Verbatim}
+
+    \subsection{CUADRANTES}\label{cuadrantes}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}52}]:} \PY{n}{c1} \PY{o}{=} \PY{n}{res}\PY{p}{[}\PY{p}{(}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{)} \PY{o}{\PYZam{}} \PY{n}{cnd3} \PY{o}{\PYZam{}} \PY{n}{cnd4}\PY{p}{]}
+         \PY{n}{c1}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}52}]:}
+
+    \centering{\begin{tabular}{llrrrrrr}
+\toprule
+Empty DataFrame
+Columns: Index(['code', 'idep', 'iesp', 'scr', 'irx', 'irm', 'igl'], dtype='object')
+Index: Int64Index([], dtype='int64') \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}53}]:} \PY{n}{c2} \PY{o}{=} \PY{n}{res}\PY{p}{[}\PY{p}{(}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{)} \PY{o}{\PYZam{}} \PY{n}{cnd3} \PY{o}{\PYZam{}} \PY{n}{cnd5}\PY{p}{]}
+         \PY{n}{c2}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}53}]:}
+
+    \centering{\begin{tabular}{llrrrrrr}
+\toprule
+{} & code &   idep &     iesp &    scr &   irx &   irm &    igl \\
+\midrule
+6  &    7 &  92.44 &  1061.90 &  40.98 &  4.40 &  0.41 &  59.02 \\
+27 &   29 &  30.67 &   309.79 &  36.25 &  8.74 &  0.92 &  63.75 \\
+65 &   71 &  31.18 &   141.60 &   7.07 &  2.71 &  0.53 &  92.93 \\
+68 &   74 &  22.60 &   287.38 &  49.33 &  2.86 &  0.22 &  50.67 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}54}]:} \PY{n}{c3} \PY{o}{=} \PY{n}{res}\PY{p}{[}\PY{p}{(}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{)} \PY{o}{\PYZam{}} \PY{n}{cnd3}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1} \PY{o}{\PYZam{}} \PY{n}{cnd4}\PY{p}{]}
+         \PY{n}{c3}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}54}]:}
+
+    \centering{\begin{tabular}{llrrrrrr}
+\toprule
+{} & code &    idep &     iesp &     scr &    irx &    irm &    igl \\
+\midrule
+3  &    4 &  146.76 &   465.79 &   -4.65 &   4.19 &   1.03 &  95.35 \\
+7  &    8 &  100.05 &   410.83 &  -23.23 &   1.94 &   0.70 &  76.77 \\
+9  &   10 &  486.01 &     0.00 & -100.00 &   0.00 &   1.93 &   0.00 \\
+18 &   20 &  148.51 &   344.54 &  -31.82 &   1.53 &   0.67 &  68.18 \\
+20 &   22 &  261.89 &    58.27 &  -85.23 &   0.66 &   1.87 &  14.77 \\
+22 &   24 &  471.69 &  1009.57 &  -32.35 &   3.53 &   1.55 &  67.65 \\
+25 &   27 &  157.01 &   263.79 &  -72.73 &  17.79 &  25.28 &  27.27 \\
+31 &   33 &  254.63 &    29.80 &  -92.11 &   0.31 &   1.67 &   7.89 \\
+44 &   48 &  125.75 &    19.91 &  -91.52 &   0.36 &   1.81 &   8.48 \\
+56 &   61 &  124.37 &    36.79 &  -92.45 &   0.31 &   1.75 &   7.55 \\
+57 &   62 &  152.07 &    24.69 &  -94.97 &   0.26 &   2.22 &   5.03 \\
+67 &   73 &  102.22 &    42.95 &  -78.29 &   0.97 &   1.79 &  21.71 \\
+84 &   94 &  184.26 &    47.49 &  -87.96 &   0.66 &   2.33 &  12.04 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}55}]:} \PY{n}{c3}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{CAPÍTULO ARANCELARIO}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PORCENTAJE (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{c3}\PY{o}{.}\PY{n}{code}\PY{p}{,} \PY{n}{rotation} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{upper right}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{VARIABLE}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_136_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}56}]:} \PY{n}{c4} \PY{o}{=} \PY{n}{res}\PY{p}{[}\PY{p}{(}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{)} \PY{o}{\PYZam{}} \PY{n}{cnd3}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1} \PY{o}{\PYZam{}} \PY{n}{cnd5}\PY{p}{]}
+         \PY{n}{c4}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}56}]:}
+
+    \centering{\begin{tabular}{llrrrrrr}
+\toprule
+{} & code &    idep &     iesp &    scr &    irx &    irm &    igl \\
+\midrule
+3  &    4 &  146.76 &   465.79 &  -4.65 &   4.19 &   1.03 &  95.35 \\
+7  &    8 &  100.05 &   410.83 & -23.23 &   1.94 &   0.70 &  76.77 \\
+18 &   20 &  148.51 &   344.54 & -31.82 &   1.53 &   0.67 &  68.18 \\
+22 &   24 &  471.69 &  1009.57 & -32.35 &   3.53 &   1.55 &  67.65 \\
+25 &   27 &  157.01 &   263.79 & -72.73 &  17.79 &  25.28 &  27.27 \\
+28 &   30 &   88.85 &   277.71 &  -3.60 &  14.37 &   3.46 &  96.40 \\
+80 &   90 &   67.61 &   102.81 & -40.37 &   3.32 &   1.75 &  59.63 \\
+\bottomrule
+\end{tabular}
+}
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}57}]:} \PY{n}{c4}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{CAPÍTULO ARANCELARIO}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PORCENTAJE (}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{c4}\PY{o}{.}\PY{n}{code}\PY{p}{,} \PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{upper right}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{VARIABLE}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_138_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}58}]:} \PY{n}{dplot} \PY{o}{=} \PY{n}{res}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{p}{:}\PY{p}{]}
+         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+
+         \PY{n}{dplot}\PY{o}{.}\PY{n}{plot}\PY{p}{(}
+             \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{red}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{,} \PY{p}{]}\PY{o}{.}\PY{n}{index}\PY{p}{:}
+             \PY{n}{s} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)} \PY{o}{/} \PY{l+m+mi}{2}
+             \PY{n}{x} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+             \PY{n}{y} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{irm}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+             \PY{n}{dx} \PY{o}{=} \PY{l+m+mi}{1}
+             \PY{n}{dy} \PY{o}{=} \PY{l+m+mf}{1.5}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{y}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{green}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{20} \PY{o}{*} \PY{n}{s}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{n}{x} \PY{o}{+} \PY{n}{dx}\PY{p}{,} \PY{n}{y} \PY{o}{+} \PY{n}{dy}\PY{p}{,} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{code}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{arrow}\PY{p}{(}
+                 \PY{n}{x}\PY{p}{,}
+                 \PY{n}{y}\PY{p}{,}
+                 \PY{l+m+mi}{1}\PY{p}{,}
+                 \PY{l+m+mi}{1}\PY{p}{,} \PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{axvline}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IRX}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IRM}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{ax}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{upper right}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{VARIABLE}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/mmngreco/anaconda3/lib/python3.5/site-packages/matplotlib/axes/\_axes.py:519: UserWarning: No labelled objects found. Use label='{\ldots}' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_139_1.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}59}]:} \PY{n}{dplot} \PY{o}{=} \PY{n}{res}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{(}\PY{n}{cnd1} \PY{o}{|} \PY{n}{cnd2}\PY{p}{)}\PY{p}{,} \PY{p}{:}\PY{p}{]}
+         \PY{n}{fig}\PY{p}{,} \PY{p}{(}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{)} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+         \PY{n}{dplot}\PY{o}{.}\PY{n}{plot}\PY{p}{(}
+             \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{red}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+
+         \PY{n}{dplot}\PY{o}{.}\PY{n}{plot}\PY{p}{(}
+             \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{iesp}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{ax2}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{green}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{dplot}\PY{o}{.}\PY{n}{index}\PY{p}{:}
+             \PY{n}{s} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}}
+             \PY{n}{s1} \PY{o}{=} \PY{n}{s} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{i}\PY{p}{)}
+             \PY{n}{s2} \PY{o}{=} \PY{n}{s} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{i}\PY{p}{)}
+             \PY{n}{x1} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{idep}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+             \PY{n}{x2} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{iesp}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+             \PY{n}{y} \PY{o}{=} \PY{n}{dplot}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scr}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+             \PY{n}{d} \PY{o}{=} \PY{l+m+mi}{20}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{annotate}\PY{p}{(}
+                 \PY{n}{s1}\PY{p}{,}
+                 \PY{n}{xy}\PY{o}{=}\PY{p}{(}\PY{n}{x1}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{,}
+                 \PY{n}{xytext}\PY{o}{=}\PY{p}{(}\PY{p}{(}\PY{n}{x1} \PY{o}{+} \PY{n}{d}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                 \PY{n}{arrowprops}\PY{o}{=}\PY{n+nb}{dict}\PY{p}{(}
+                     \PY{n}{arrowstyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{connectionstyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{arc3,rad=0.8}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
+             \PY{n}{ax2}\PY{o}{.}\PY{n}{annotate}\PY{p}{(}
+                 \PY{n}{s2}\PY{p}{,}
+                 \PY{n}{xy}\PY{o}{=}\PY{p}{(}\PY{n}{x2}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{,}
+                 \PY{n}{xytext}\PY{o}{=}\PY{p}{(}\PY{p}{(}\PY{n}{x2} \PY{o}{+} \PY{n}{d}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                 \PY{n}{arrowprops}\PY{o}{=}\PY{n+nb}{dict}\PY{p}{(}
+                     \PY{n}{arrowstyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{connectionstyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{arc3,rad=0.8}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{axvline}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{axvline}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+
+         \PY{n}{sns}\PY{o}{.}\PY{n}{despine}\PY{p}{(}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{I.DEP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{I.ESP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{SCR}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{13}\PY{p}{)}
+
+         \PY{n}{ax1}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+         \PY{n}{ax2}\PY{o}{.}\PY{n}{tick\PYZus{}params}\PY{p}{(}\PY{n}{labelsize}\PY{o}{=}\PY{l+m+mi}{15}\PY{p}{)}
+
+         \PY{c+c1}{\PYZsh{}plt.legend(loc=\PYZdq{}upper right\PYZdq{}, title=\PYZdq{}VARIABLE\PYZdq{}, fontsize=13)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{80}\PY{p}{,} \PY{l+m+mi}{80}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../imgs/cuadrantes.eps}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bbox\PYZus{}iches}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{1800}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{analysis_files/analysis_140_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+\chapter{COMERCIO INTRAINDUSTRIAL}\label{comercio-intraindustrial}
+
+\[IGL_i = \frac{X_i + M_i - |X_i - M_i|}{X_i + M_i}100\]
+
+\[IGL_{agg} = \frac{\sum_i(X_i + M_i) - \sum_i |X_i - M_i|}{\sum_i (X_i + M_i)}100\]
+
+\chapter{POLITICA COMERCIAL}\label{politica-comercial}
+
+\chapter{RESUMEN Y CONCLUSIONES}\label{resumen-y-conclusiones}
+
+\chapter{ANEXO}\label{anexo}
+
+\chapter{BIBLIOGRAFIA}\label{bibliografia}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:}
+\end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+
+
+\bibliographystyle{unsrt}
+\bibliography{comercio}
+
+
+    \end{document}

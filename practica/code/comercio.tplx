@@ -1,0 +1,15 @@
+
+((*- extends 'article.tplx' -*))
+
+((* block author *))
+\author{Maximiliano Greco}
+((* endblock author *))
+
+((* block title *))
+\title{Análisis del comercio exterior de Chipre}
+((* endblock title *))
+
+((* block bibliography *))
+\bibliographystyle{unsrt}
+\bibliography{comercio}
+((* endblock bibliography *))
