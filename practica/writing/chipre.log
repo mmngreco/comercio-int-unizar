@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  13 OCT 2016 18:01
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  2 NOV 2016 18:56
  restricted system commands enabled.
  file:line:error style messages enabled.
 **chipre.tex
@@ -397,7 +397,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.298 seconds)
+luaotfload | main : initialization completed in 0.253 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 \l_fontspec_script_int=\count135
@@ -602,9 +602,24 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen177
+\captionmargin@=\dimen178
+\captionwidth=\dimen179
+\caption@tempdima=\dimen180
+\caption@indent=\dimen181
+\caption@parindent=\dimen182
+\caption@hangindent=\dimen183
+)
+\c@ContinuedFloat=\count149
+Package caption Info: rotating package is loaded.
 )
 luaotfload | cache : Lookup cache loaded from /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman.luc)
-\g__fontspec_family_TimesNewRoman_int=\count149
+\g__fontspec_family_TimesNewRoman_int=\count150
 (compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold-italic.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold-italic.luc)(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold.luc)(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-italic.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-italic.luc)
 luaotfload | aux : font no 22 (<unknown>) does not define feature smcp for script latn with language dflt
 luaotfload | aux : no font with id 22
@@ -635,41 +650,60 @@ luaotfload | aux : no font with id 23
  (./chipre.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = chipre.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for EU2/lmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for EU2/lmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 37.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    ... okay on input line 37.
  (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count150
-\scratchdimen=\dimen177
+\scratchcounter=\count151
+\scratchdimen=\dimen184
 \scratchbox=\box48
-\nofMPsegments=\count151
-\nofMParguments=\count152
+\nofMPsegments=\count152
+\nofMParguments=\count153
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count153
-\MPscratchDim=\dimen178
-\MPnumerator=\count154
-\makeMPintoPDFobject=\count155
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen185
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -704,8 +738,8 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -713,56 +747,56 @@ LaTeX Info: Redefining \% on input line 36.
 .................................................
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 36.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 36.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 36.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 36.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 36.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 36.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 36.
-LaTeX Font Info:    Redeclaring math accent \check on input line 36.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 36.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 36.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 36.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 36.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 37.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 37.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 37.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 37.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 37.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 37.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 37.
+LaTeX Font Info:    Redeclaring math accent \check on input line 37.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 37.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 37.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 37.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 37.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU2' for symbol font
-(Font)              `operators' in the math version `normal' on input line 36.
+(Font)              `operators' in the math version `normal' on input line 37.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU2/TimesNewRoman(0)/m/n on input line 36.
+(Font)                  OT1/cmr/m/n --> EU2/TimesNewRoman(0)/m/n on input line 37.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU2' for symbol font
-(Font)              `operators' in the math version `bold' on input line 36.
+(Font)              `operators' in the math version `bold' on input line 37.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU2/TimesNewRoman(0)/m/n on input line 36.
+(Font)                  OT1/cmr/bx/n --> EU2/TimesNewRoman(0)/m/n on input line 37.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU2/TimesNewRoman(0)/m/n --> EU2/TimesNewRoman(0)/m/n on input line 36.
+(Font)                  EU2/TimesNewRoman(0)/m/n --> EU2/TimesNewRoman(0)/m/n on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU2/TimesNewRoman(0)/m/it on input line 36.
+(Font)                  OT1/cmr/m/it --> EU2/TimesNewRoman(0)/m/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU2/TimesNewRoman(0)/bx/n on input line 36.
+(Font)                  OT1/cmr/bx/n --> EU2/TimesNewRoman(0)/bx/n on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU2/lmss/m/n on input line 36.
+(Font)                  OT1/cmss/m/n --> EU2/lmss/m/n on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU2/lmtt/m/n on input line 36.
+(Font)                  OT1/cmtt/m/n --> EU2/lmtt/m/n on input line 37.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU2/TimesNewRoman(0)/m/n --> EU2/TimesNewRoman(0)/bx/n on input line 36.
+(Font)                  EU2/TimesNewRoman(0)/m/n --> EU2/TimesNewRoman(0)/bx/n on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU2/TimesNewRoman(0)/bx/it on input line 36.
+(Font)                  OT1/cmr/bx/it --> EU2/TimesNewRoman(0)/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU2/lmss/bx/n on input line 36.
+(Font)                  OT1/cmss/bx/n --> EU2/lmss/bx/n on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU2/lmtt/bx/n on input line 36.
+(Font)                  OT1/cmtt/m/n --> EU2/lmtt/bx/n on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -798,216 +832,263 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package epstopdf Info: Source file: <./imgs/logo_uz.eps>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package epstopdf Info: Source file: <../imgs/logo_uz.eps>
 (epstopdf)                    date: 2016-09-21 11:28:34
 (epstopdf)                    size: 1150666 bytes
-(epstopdf)             Output file: <./imgs/logo_uz-eps-converted-to.pdf>
+(epstopdf)             Output file: <../imgs/logo_uz-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-10 18:10:56
 (epstopdf)                    size: 28766 bytes
-(epstopdf)             Command: <repstopdf --outfile=./imgs/logo_uz-eps-converted-to.pdf ./imgs/logo_uz.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             Command: <repstopdf --outfile=../imgs/logo_uz-eps-converted-to.pdf ../imgs/logo_uz.eps>
+(epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
-<./imgs/logo_uz-eps-converted-to.pdf, id=1, 771.88374pt x 245.91875pt>
-File: ./imgs/logo_uz-eps-converted-to.pdf Graphic file (type pdf)
- <use ./imgs/logo_uz-eps-converted-to.pdf>
-Package luatex.def Info: ./imgs/logo_uz-eps-converted-to.pdf used on input line 44.
+<../imgs/logo_uz-eps-converted-to.pdf, id=1, 771.88374pt x 245.91875pt>
+File: ../imgs/logo_uz-eps-converted-to.pdf Graphic file (type pdf)
+ <use ../imgs/logo_uz-eps-converted-to.pdf>
+Package luatex.def Info: ../imgs/logo_uz-eps-converted-to.pdf used on input line 45.
 (luatex.def)             Requested size: 178.6131pt x 56.9055pt.
-Package epstopdf Info: Source file: <./imgs/logo_fecem.eps>
+Package epstopdf Info: Source file: <../imgs/logo_fecem.eps>
 (epstopdf)                    date: 2016-09-21 11:28:21
 (epstopdf)                    size: 4585321 bytes
-(epstopdf)             Output file: <./imgs/logo_fecem-eps-converted-to.pdf>
+(epstopdf)             Output file: <../imgs/logo_fecem-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-10 18:10:57
 (epstopdf)                    size: 159309 bytes
-(epstopdf)             Command: <repstopdf --outfile=./imgs/logo_fecem-eps-converted-to.pdf ./imgs/logo_fecem.eps>
-(epstopdf)             \includegraphics on input line 46.
+(epstopdf)             Command: <repstopdf --outfile=../imgs/logo_fecem-eps-converted-to.pdf ../imgs/logo_fecem.eps>
+(epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
- <./imgs/logo_fecem-eps-converted-to.pdf, id=2, 1606.0pt x 472.76625pt>
-File: ./imgs/logo_fecem-eps-converted-to.pdf Graphic file (type pdf)
- <use ./imgs/logo_fecem-eps-converted-to.pdf>
-Package luatex.def Info: ./imgs/logo_fecem-eps-converted-to.pdf used on input line 46.
+ <../imgs/logo_fecem-eps-converted-to.pdf, id=2, 1606.0pt x 472.76625pt>
+File: ../imgs/logo_fecem-eps-converted-to.pdf Graphic file (type pdf)
+ <use ../imgs/logo_fecem-eps-converted-to.pdf>
+Package luatex.def Info: ../imgs/logo_fecem-eps-converted-to.pdf used on input line 47.
 (luatex.def)             Requested size: 193.29982pt x 56.9055pt.
  [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./imgs/logo_uz-eps-converted-to.pdf><./imgs/logo_fecem-eps-converted-to.pdf>]
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<../imgs/logo_uz-eps-converted-to.pdf><../imgs/logo_fecem-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `EU2/TimesNewRoman(0)/m/sl' in size <12> not available
-(Font)              Font shape `EU2/TimesNewRoman(0)/m/it' tried instead on input line 79.
+(Font)              Font shape `EU2/TimesNewRoman(0)/m/it' tried instead on input line 84.
  [2
 
 ]
 Capítulo 1.
-Package epstopdf Info: Source file: <imgs/mapa.eps>
-(epstopdf)                    date: 2016-10-13 16:42:01
-(epstopdf)                    size: 1608874 bytes
-(epstopdf)             Output file: <imgs/mapa-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <../imgs/mapa.eps>
+(epstopdf)                    date: 2016-11-02 16:32:40
+(epstopdf)                    size: 1615149 bytes
+(epstopdf)             Output file: <../imgs/mapa-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-13 17:42:33
 (epstopdf)                    size: 386357 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/mapa-eps-converted-to.pdf imgs/mapa.eps>
-(epstopdf)             \includegraphics on input line 88.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/mapa-eps-converted-to.pdf, id=23, 505.89pt x 505.89pt>
-File: imgs/mapa-eps-converted-to.pdf Graphic file (type pdf)
- <use imgs/mapa-eps-converted-to.pdf>
-Package luatex.def Info: imgs/mapa-eps-converted-to.pdf used on input line 88.
-(luatex.def)             Requested size: 301.12152pt x 301.12793pt.
- [3<./imgs/mapa-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
- [4]
-Capítulo 2.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 103.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+(epstopdf)             Command: <repstopdf --outfile=../imgs/mapa-eps-converted-to.pdf ../imgs/mapa.eps>
+(epstopdf)             \includegraphics on input line 94.
+system(repstopdf --outfile=../imgs/mapa-eps-converted-to.pdf ../imgs/mapa.eps) executed.
+Package epstopdf Info: Result file: <../imgs/mapa-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-13 17:42:33
+(epstopdf)                    size: 386357 bytes.
+<../imgs/mapa-eps-converted-to.pdf, id=23, 505.89pt x 505.89pt>
+File: ../imgs/mapa-eps-converted-to.pdf Graphic file (type pdf)
+ <use ../imgs/mapa-eps-converted-to.pdf>
+Package luatex.def Info: ../imgs/mapa-eps-converted-to.pdf used on input line 94.
+(luatex.def)             Requested size: 256.0748pt x 256.07838pt.
+ [3<../imgs/mapa-eps-converted-to.pdf>] <../imgs/mapa_distritos.png, id=40, 642.4pt x 390.45876pt>
+File: ../imgs/mapa_distritos.png Graphic file (type png)
+ <use ../imgs/mapa_distritos.png>
+Package luatex.def Info: ../imgs/mapa_distritos.png used on input line 124.
+(luatex.def)             Requested size: 256.0748pt x 155.65047pt.
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+ [4<../imgs/mapa_distritos.png>]
+LaTeX Info: Redefining \. on input line 171.
+LaTeX Info: Redefining \% on input line 171.
+ [5]
+LaTeX Font Info:    Try loading font information for U+msa on input line 173.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+LaTeX Font Info:    Try loading font information for U+msb on input line 173.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package epstopdf Info: Source file: <imgs/ev_dx.eps>
-(epstopdf)                    date: 2016-10-13 17:24:39
-(epstopdf)                    size: 50620 bytes
-(epstopdf)             Output file: <imgs/ev_dx-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:34
-(epstopdf)                    size: 29959 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/ev_dx-eps-converted-to.pdf imgs/ev_dx.eps>
-(epstopdf)             \includegraphics on input line 144.
-Package epstopdf Info: Output file is already uptodate.
- <imgs/ev_dx-eps-converted-to.pdf, id=43, 722.7pt x 361.35pt>
-File: imgs/ev_dx-eps-converted-to.pdf Graphic file (type pdf)
- <use imgs/ev_dx-eps-converted-to.pdf>
-Package luatex.def Info: imgs/ev_dx-eps-converted-to.pdf used on input line 144.
+Package epstopdf Info: Source file: <../imgs/rri_0.eps>
+(epstopdf)                    date: 2016-11-02 17:09:44
+(epstopdf)                    size: 28690 bytes
+(epstopdf)             Output file: <../imgs/rri_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-13 17:42:35
+(epstopdf)                    size: 24801 bytes
+(epstopdf)             Command: <repstopdf --outfile=../imgs/rri_0-eps-converted-to.pdf ../imgs/rri_0.eps>
+(epstopdf)             \includegraphics on input line 178.
+system(repstopdf --outfile=../imgs/rri_0-eps-converted-to.pdf ../imgs/rri_0.eps) executed.
+Package epstopdf Info: Result file: <../imgs/rri_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-13 17:42:35
+(epstopdf)                    size: 24801 bytes.
+ <../imgs/rri_0-eps-converted-to.pdf, id=48, 722.7pt x 361.35pt>
+File: ../imgs/rri_0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ../imgs/rri_0-eps-converted-to.pdf>
+Package luatex.def Info: ../imgs/rri_0-eps-converted-to.pdf used on input line 178.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [6<../imgs/rri_0-eps-converted-to.pdf>]
+Capítulo 2.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../imgs/ev_nominal.pdf, id=88, 578.16pt x 433.62pt>
+File: ../imgs/ev_nominal.pdf Graphic file (type pdf)
+ <use ../imgs/ev_nominal.pdf>
+Package luatex.def Info: ../imgs/ev_nominal.pdf used on input line 230.
+(luatex.def)             Requested size: 301.12152pt x 225.84099pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 151.
+               Default added (so using `tbp') on input line 241.
 
-Package epstopdf Info: Source file: <imgs/ev_m.eps>
-(epstopdf)                    date: 2016-10-13 17:25:18
-(epstopdf)                    size: 47045 bytes
-(epstopdf)             Output file: <imgs/ev_m-eps-converted-to.pdf>
+[7
+
+<../imgs/ev_nominal.pdf>]
+Package epstopdf Info: Source file: <../imgs/ev_m.eps>
+(epstopdf)                    date: 2016-10-18 17:30:15
+(epstopdf)                    size: 32833 bytes
+(epstopdf)             Output file: <../imgs/ev_m-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-13 17:42:34
 (epstopdf)                    size: 29598 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/ev_m-eps-converted-to.pdf imgs/ev_m.eps>
-(epstopdf)             \includegraphics on input line 193.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/ev_m-eps-converted-to.pdf, id=44, 722.7pt x 361.35pt>
-File: imgs/ev_m-eps-converted-to.pdf Graphic file (type pdf)
- <use imgs/ev_m-eps-converted-to.pdf>
-Package luatex.def Info: imgs/ev_m-eps-converted-to.pdf used on input line 193.
+(epstopdf)             Command: <repstopdf --outfile=../imgs/ev_m-eps-converted-to.pdf ../imgs/ev_m.eps>
+(epstopdf)             \includegraphics on input line 283.
+system(repstopdf --outfile=../imgs/ev_m-eps-converted-to.pdf ../imgs/ev_m.eps) executed.
+Package epstopdf Info: Result file: <../imgs/ev_m-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-13 17:42:34
+(epstopdf)                    size: 29598 bytes.
+ <../imgs/ev_m-eps-converted-to.pdf, id=136, 722.7pt x 361.35pt>
+File: ../imgs/ev_m-eps-converted-to.pdf Graphic file (type pdf)
+ <use ../imgs/ev_m-eps-converted-to.pdf>
+Package luatex.def Info: ../imgs/ev_m-eps-converted-to.pdf used on input line 283.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
-Package epstopdf Info: Source file: <imgs/rri_0.eps>
-(epstopdf)                    date: 2016-10-13 17:27:06
-(epstopdf)                    size: 38775 bytes
-(epstopdf)             Output file: <imgs/rri_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:35
-(epstopdf)                    size: 24801 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/rri_0-eps-converted-to.pdf imgs/rri_0.eps>
-(epstopdf)             \includegraphics on input line 202.
-Package epstopdf Info: Output file is already uptodate.
- <imgs/rri_0-eps-converted-to.pdf, id=45, 722.7pt x 361.35pt>
-File: imgs/rri_0-eps-converted-to.pdf Graphic file (type pdf)
- <use imgs/rri_0-eps-converted-to.pdf>
-Package luatex.def Info: imgs/rri_0-eps-converted-to.pdf used on input line 202.
-(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
- [5
-
-<./imgs/ev_dx-eps-converted-to.pdf><./imgs/ev_m-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
- [6] [7]
-LaTeX Info: Redefining \. on input line 208.
-LaTeX Info: Redefining \% on input line 208.
- [8<./imgs/rri_0-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [8<../imgs/ev_m-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [9]
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [10]
 Capítulo 3.
-[9
+<../imgs/pie_mgeo.pdf, id=193, 722.7pt x 361.35pt>
+File: ../imgs/pie_mgeo.pdf Graphic file (type pdf)
+ <use ../imgs/pie_mgeo.pdf>
+Package luatex.def Info: ../imgs/pie_mgeo.pdf used on input line 294.
+(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
+ <../imgs/bar_mgeo.pdf, id=194, 722.7pt x 433.62pt>
+File: ../imgs/bar_mgeo.pdf Graphic file (type pdf)
+ <use ../imgs/bar_mgeo.pdf>
+Package luatex.def Info: ../imgs/bar_mgeo.pdf used on input line 302.
+(luatex.def)             Requested size: 301.12152pt x 180.67014pt.
+ [11
 
-]
-LaTeX Info: Redefining \. on input line 214.
-LaTeX Info: Redefining \% on input line 214.
- [10
-
-]
+<../imgs/pie_mgeo.pdf><../imgs/bar_mgeo.pdf>] <../imgs/pie_xgeo.pdf, id=279, 722.7pt x 361.35pt>
+File: ../imgs/pie_xgeo.pdf Graphic file (type pdf)
+ <use ../imgs/pie_xgeo.pdf>
+Package luatex.def Info: ../imgs/pie_xgeo.pdf used on input line 313.
+(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
+ <../imgs/bar_xgeo.pdf, id=280, 722.7pt x 433.62pt>
+File: ../imgs/bar_xgeo.pdf Graphic file (type pdf)
+ <use ../imgs/bar_xgeo.pdf>
+Package luatex.def Info: ../imgs/bar_xgeo.pdf used on input line 321.
+(luatex.def)             Requested size: 301.12152pt x 180.67014pt.
+LaTeX Info: Redefining \. on input line 333.
+LaTeX Info: Redefining \% on input line 333.
+ [12<../imgs/pie_xgeo.pdf><../imgs/bar_xgeo.pdf>]
 Capítulo 4.
-[11]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
- [12
+[13
 
 ]
-Capítulo 5.
-[13]
-LaTeX Info: Redefining \. on input line 220.
-LaTeX Info: Redefining \% on input line 220.
+LaTeX Info: Redefining \. on input line 336.
+LaTeX Info: Redefining \% on input line 336.
  [14
 
 ]
-Capítulo 6.
+Capítulo 5.
 [15]
-LaTeX Info: Redefining \. on input line 222.
-LaTeX Info: Redefining \% on input line 222.
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
  [16
 
 ]
+Capítulo 6.
+<../imgs/cuadrantes2.pdf, id=384, 867.24pt x 433.62pt>
+File: ../imgs/cuadrantes2.pdf Graphic file (type pdf)
+ <use ../imgs/cuadrantes2.pdf>
+Package luatex.def Info: ../imgs/cuadrantes2.pdf used on input line 376.
+(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
+ <../imgs/cuadrantes.pdf, id=385, 1084.05pt x 505.89pt>
+File: ../imgs/cuadrantes.pdf Graphic file (type pdf)
+ <use ../imgs/cuadrantes.pdf>
+Package luatex.def Info: ../imgs/cuadrantes.pdf used on input line 385.
+(luatex.def)             Requested size: 401.49536pt x 187.36162pt.
+ [17]
+LaTeX Info: Redefining \. on input line 391.
+LaTeX Info: Redefining \% on input line 391.
+ [18<../imgs/cuadrantes2.pdf><../imgs/cuadrantes.pdf>]
 Capítulo 7.
-[17]
-LaTeX Info: Redefining \. on input line 224.
-LaTeX Info: Redefining \% on input line 224.
- [18
+[19
 
 ]
-Capítulo 8.
-[19]
-LaTeX Info: Redefining \. on input line 226.
-LaTeX Info: Redefining \% on input line 226.
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
  [20
 
 ]
-Capítulo 9.
+Capítulo 8.
 [21]
-LaTeX Info: Redefining \. on input line 228.
-LaTeX Info: Redefining \% on input line 228.
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
  [22
 
 ]
-Capítulo 10.
+Capítulo 9.
 [23]
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
- [24] (./chipre.bbl
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
+ [24
+
+]
+Capítulo 10.
+[25]
+LaTeX Info: Redefining \. on input line 462.
+LaTeX Info: Redefining \% on input line 462.
+ [26] (./chipre.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [25
+) [27
 
 
 ] (./chipre.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-))
+)
+
+LaTeX Warning: There were multiply-defined labels.
+
+)
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 35 (\begingroup)
+### semi simple group (level 1) entered at line 36 (\begingroup)
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 17654 strings out of 495119
+ 18808 strings out of 495119
  100000,383344 words of node,token memory allocated
- 1532 words of node memory still in use:
-   8 hlist, 2 vlist, 3 rule, 128 glue, 1 kern, 45 attribute, 54 glue_spec, 45 attribute_list, 1 write nodes
-   avail lists: 2:963,3:83,4:6,5:70,6:3734,7:1252,8:102,9:363,10:5,11:264
- 20661 multiletter control sequences out of 65536+600000
+ 1867 words of node memory still in use:
+   8 hlist, 2 vlist, 3 rule, 169 glue, 1 kern, 57 attribute, 54 glue_spec, 57 attribute_list, 1 write nodes
+   avail lists: 2:1491,3:124,4:18,5:90,6:4002,7:2552,8:165,9:667,10:12,11:283
+ 21733 multiletter control sequences out of 65536+600000
  51 fonts using 9258935 bytes
- 38i,14n,62p,772b,1362s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 38i,14n,62p,952b,1519s stack positions out of 5000i,500n,10000p,200000b,100000s
 </Library/Fonts/Times New Roman Italic.ttf></Library/Fonts/Times New Roman Bold.ttf></Library/Fonts/Times New Roman.ttf></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on chipre.pdf (25 pages, 805798 bytes).
+Output written on chipre.pdf (27 pages, 925071 bytes).
 
-PDF statistics: 288 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+PDF statistics: 546 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
