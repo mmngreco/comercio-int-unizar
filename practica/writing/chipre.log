@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  2 NOV 2016 18:56
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  24 DEC 2016 15:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **chipre.tex
@@ -397,7 +397,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.253 seconds)
+luaotfload | main : initialization completed in 0.279 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
 \l_fontspec_script_int=\count135
@@ -650,25 +650,6 @@ luaotfload | aux : no font with id 23
  (./chipre.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = chipre.aux
 
@@ -733,7 +714,7 @@ Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.eps]
+(grfext)             [.pdf,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
@@ -872,79 +853,59 @@ LaTeX Font Info:    Font shape `EU2/TimesNewRoman(0)/m/sl' in size <12> not avai
 
 ]
 Capítulo 1.
-Package epstopdf Info: Source file: <../imgs/mapa.eps>
-(epstopdf)                    date: 2016-11-02 16:32:40
-(epstopdf)                    size: 1615149 bytes
-(epstopdf)             Output file: <../imgs/mapa-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:33
-(epstopdf)                    size: 386357 bytes
-(epstopdf)             Command: <repstopdf --outfile=../imgs/mapa-eps-converted-to.pdf ../imgs/mapa.eps>
-(epstopdf)             \includegraphics on input line 94.
-system(repstopdf --outfile=../imgs/mapa-eps-converted-to.pdf ../imgs/mapa.eps) executed.
-Package epstopdf Info: Result file: <../imgs/mapa-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:33
-(epstopdf)                    size: 386357 bytes.
-<../imgs/mapa-eps-converted-to.pdf, id=23, 505.89pt x 505.89pt>
-File: ../imgs/mapa-eps-converted-to.pdf Graphic file (type pdf)
- <use ../imgs/mapa-eps-converted-to.pdf>
-Package luatex.def Info: ../imgs/mapa-eps-converted-to.pdf used on input line 94.
-(luatex.def)             Requested size: 256.0748pt x 256.07838pt.
- [3<../imgs/mapa-eps-converted-to.pdf>] <../imgs/mapa_distritos.png, id=40, 642.4pt x 390.45876pt>
+<../imgs/mapa.pdf, id=23, 505.89pt x 657.65701pt>
+File: ../imgs/mapa.pdf Graphic file (type pdf)
+ <use ../imgs/mapa.pdf>
+Package luatex.def Info: ../imgs/mapa.pdf used on input line 94.
+(luatex.def)             Requested size: 256.0748pt x 332.90192pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3<../imgs/mapa.pdf>] <../imgs/mapa_distritos.png, id=45, 642.4pt x 390.45876pt>
 File: ../imgs/mapa_distritos.png Graphic file (type png)
  <use ../imgs/mapa_distritos.png>
-Package luatex.def Info: ../imgs/mapa_distritos.png used on input line 124.
+Package luatex.def Info: ../imgs/mapa_distritos.png used on input line 127.
 (luatex.def)             Requested size: 256.0748pt x 155.65047pt.
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
- [4<../imgs/mapa_distritos.png>]
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
- [5]
-LaTeX Font Info:    Try loading font information for U+msa on input line 173.
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [4]
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+ [5<../imgs/mapa_distritos.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 175.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 173.
+LaTeX Font Info:    Try loading font information for U+msb on input line 175.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package epstopdf Info: Source file: <../imgs/rri_0.eps>
-(epstopdf)                    date: 2016-11-02 17:09:44
-(epstopdf)                    size: 28690 bytes
-(epstopdf)             Output file: <../imgs/rri_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:35
-(epstopdf)                    size: 24801 bytes
-(epstopdf)             Command: <repstopdf --outfile=../imgs/rri_0-eps-converted-to.pdf ../imgs/rri_0.eps>
-(epstopdf)             \includegraphics on input line 178.
-system(repstopdf --outfile=../imgs/rri_0-eps-converted-to.pdf ../imgs/rri_0.eps) executed.
-Package epstopdf Info: Result file: <../imgs/rri_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-13 17:42:35
-(epstopdf)                    size: 24801 bytes.
- <../imgs/rri_0-eps-converted-to.pdf, id=48, 722.7pt x 361.35pt>
-File: ../imgs/rri_0-eps-converted-to.pdf Graphic file (type pdf)
- <use ../imgs/rri_0-eps-converted-to.pdf>
-Package luatex.def Info: ../imgs/rri_0-eps-converted-to.pdf used on input line 178.
+) <../imgs/rri_0.pdf, id=53, 722.7pt x 361.35pt>
+File: ../imgs/rri_0.pdf Graphic file (type pdf)
+ <use ../imgs/rri_0.pdf>
+Package luatex.def Info: ../imgs/rri_0.pdf used on input line 180.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
- [6<../imgs/rri_0-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+ [6<../imgs/rri_0.pdf>]
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
+ [7]
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
+ [8
+
+]
 Capítulo 2.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../imgs/ev_nominal.pdf, id=88, 578.16pt x 433.62pt>
+<../imgs/ev_nominal.pdf, id=104, 578.16pt x 433.62pt>
 File: ../imgs/ev_nominal.pdf Graphic file (type pdf)
  <use ../imgs/ev_nominal.pdf>
-Package luatex.def Info: ../imgs/ev_nominal.pdf used on input line 230.
+Package luatex.def Info: ../imgs/ev_nominal.pdf used on input line 229.
 (luatex.def)             Requested size: 301.12152pt x 225.84099pt.
-
+ [9<../imgs/ev_nominal.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 241.
+               Default added (so using `tbp') on input line 240.
 
-[7
-
-<../imgs/ev_nominal.pdf>]
 Package epstopdf Info: Source file: <../imgs/ev_m.eps>
 (epstopdf)                    date: 2016-10-18 17:30:15
 (epstopdf)                    size: 32833 bytes
@@ -957,109 +918,300 @@ system(repstopdf --outfile=../imgs/ev_m-eps-converted-to.pdf ../imgs/ev_m.eps) e
 Package epstopdf Info: Result file: <../imgs/ev_m-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-13 17:42:34
 (epstopdf)                    size: 29598 bytes.
- <../imgs/ev_m-eps-converted-to.pdf, id=136, 722.7pt x 361.35pt>
+<../imgs/ev_m-eps-converted-to.pdf, id=152, 722.7pt x 361.35pt>
 File: ../imgs/ev_m-eps-converted-to.pdf Graphic file (type pdf)
  <use ../imgs/ev_m-eps-converted-to.pdf>
 Package luatex.def Info: ../imgs/ev_m-eps-converted-to.pdf used on input line 283.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
- [8<../imgs/ev_m-eps-converted-to.pdf>]
+ [10<../imgs/ev_m-eps-converted-to.pdf>]
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
- [9]
+ [11]
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
- [10]
+ [12]
 Capítulo 3.
-<../imgs/pie_mgeo.pdf, id=193, 722.7pt x 361.35pt>
+<../imgs/pie_mgeo.pdf, id=210, 722.7pt x 361.35pt>
 File: ../imgs/pie_mgeo.pdf Graphic file (type pdf)
  <use ../imgs/pie_mgeo.pdf>
-Package luatex.def Info: ../imgs/pie_mgeo.pdf used on input line 294.
-(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
- <../imgs/bar_mgeo.pdf, id=194, 722.7pt x 433.62pt>
+Package luatex.def Info: ../imgs/pie_mgeo.pdf used on input line 298.
+(luatex.def)             Requested size: 351.30844pt x 175.65152pt.
+ <../imgs/bar_mgeo.pdf, id=211, 722.7pt x 433.62pt>
 File: ../imgs/bar_mgeo.pdf Graphic file (type pdf)
  <use ../imgs/bar_mgeo.pdf>
-Package luatex.def Info: ../imgs/bar_mgeo.pdf used on input line 302.
-(luatex.def)             Requested size: 301.12152pt x 180.67014pt.
- [11
+Package luatex.def Info: ../imgs/bar_mgeo.pdf used on input line 306.
+(luatex.def)             Requested size: 351.30844pt x 210.78183pt.
+ [13
 
-<../imgs/pie_mgeo.pdf><../imgs/bar_mgeo.pdf>] <../imgs/pie_xgeo.pdf, id=279, 722.7pt x 361.35pt>
+<../imgs/pie_mgeo.pdf>] <../imgs/pie_xgeo.pdf, id=257, 722.7pt x 361.35pt>
 File: ../imgs/pie_xgeo.pdf Graphic file (type pdf)
  <use ../imgs/pie_xgeo.pdf>
-Package luatex.def Info: ../imgs/pie_xgeo.pdf used on input line 313.
-(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
- <../imgs/bar_xgeo.pdf, id=280, 722.7pt x 433.62pt>
+Package luatex.def Info: ../imgs/pie_xgeo.pdf used on input line 317.
+(luatex.def)             Requested size: 351.30844pt x 175.65152pt.
+ <../imgs/bar_xgeo.pdf, id=258, 722.7pt x 433.62pt>
 File: ../imgs/bar_xgeo.pdf Graphic file (type pdf)
  <use ../imgs/bar_xgeo.pdf>
-Package luatex.def Info: ../imgs/bar_xgeo.pdf used on input line 321.
-(luatex.def)             Requested size: 301.12152pt x 180.67014pt.
+Package luatex.def Info: ../imgs/bar_xgeo.pdf used on input line 325.
+(luatex.def)             Requested size: 351.30844pt x 210.78183pt.
 LaTeX Info: Redefining \. on input line 333.
 LaTeX Info: Redefining \% on input line 333.
- [12<../imgs/pie_xgeo.pdf><../imgs/bar_xgeo.pdf>]
-Capítulo 4.
-[13
+ [14<../imgs/bar_mgeo.pdf><../imgs/pie_xgeo.pdf>]
+./chipre.tex:342: Double subscript.
+l.342 dónde, $T_i_
+                 j$ es el valor del comercio entre el país _i_ y el país _...
+I treat `x_1_2' essentially like `x_1{}_2'.
 
-]
-LaTeX Info: Redefining \. on input line 336.
-LaTeX Info: Redefining \% on input line 336.
- [14
+./chipre.tex:342: Missing $ inserted.
+<inserted text> 
+$
+l.342 ...$ es el valor del comercio entre el país _
+                                                  i_ y el país _j_, $Y_i^a$...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
-Capítulo 5.
-[15]
-LaTeX Info: Redefining \. on input line 339.
-LaTeX Info: Redefining \% on input line 339.
+./chipre.tex:342: Double subscript.
+l.342 ...es el valor del comercio entre el país _i_
+                                                   y el país _j_, $Y_i^a$ e...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./chipre.tex:342: Double subscript.
+l.342 ... comercio entre el país _i_ y el país _j_
+                                                  , $Y_i^a$ es el PIB del pa...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+Missing character: There is no í (U+00ED) in font cmmi12!
+Missing character: There is no í (U+00ED) in font cmmi12!
+./chipre.tex:342: Missing $ inserted.
+<inserted text> 
+$
+l.342 ...rcio entre el país _i_ y el país _j_, $Y_
+                                                  i^a$ es el PIB del país _...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chipre.tex:342: Missing $ inserted.
+<inserted text> 
+$
+l.342 ...el país _j_, $Y_i^a$ es el PIB del país _
+                                                  i_, $Y_j^b$ es el PIB del ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chipre.tex:342: Double subscript.
+l.342 ... país _j_, $Y_i^a$ es el PIB del país _i_
+                                                  , $Y_j^b$ es el PIB del pa...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./chipre.tex:342: Missing $ inserted.
+<inserted text> 
+$
+l.342 ...s _j_, $Y_i^a$ es el PIB del país _i_, $Y_
+                                                  j^b$ es el PIB del país j...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chipre.tex:342: Double subscript.
+l.342 ... _i_, $Y_j^b$ es el PIB del país j y $D_i_
+                                                  j$ es la distancia entre l...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[15<../imgs/bar_xgeo.pdf>]
+LaTeX Info: Redefining \. on input line 346.
+LaTeX Info: Redefining \% on input line 346.
  [16
 
 ]
-Capítulo 6.
-<../imgs/cuadrantes2.pdf, id=384, 867.24pt x 433.62pt>
-File: ../imgs/cuadrantes2.pdf Graphic file (type pdf)
- <use ../imgs/cuadrantes2.pdf>
-Package luatex.def Info: ../imgs/cuadrantes2.pdf used on input line 376.
-(luatex.def)             Requested size: 301.12152pt x 150.55846pt.
- <../imgs/cuadrantes.pdf, id=385, 1084.05pt x 505.89pt>
-File: ../imgs/cuadrantes.pdf Graphic file (type pdf)
- <use ../imgs/cuadrantes.pdf>
-Package luatex.def Info: ../imgs/cuadrantes.pdf used on input line 385.
-(luatex.def)             Requested size: 401.49536pt x 187.36162pt.
- [17]
-LaTeX Info: Redefining \. on input line 391.
-LaTeX Info: Redefining \% on input line 391.
- [18<../imgs/cuadrantes2.pdf><../imgs/cuadrantes.pdf>]
-Capítulo 7.
-[19
+Capítulo 4.
+[17]
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
+ [18
 
 ]
-LaTeX Info: Redefining \. on input line 393.
-LaTeX Info: Redefining \% on input line 393.
+Capítulo 5.
+[19]
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
  [20
 
 ]
-Capítulo 8.
-[21]
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
+Capítulo 6.
+<../imgs/cuadrantes2.pdf, id=407, 867.24pt x 433.62pt>
+File: ../imgs/cuadrantes2.pdf Graphic file (type pdf)
+ <use ../imgs/cuadrantes2.pdf>
+Package luatex.def Info: ../imgs/cuadrantes2.pdf used on input line 360.
+(luatex.def)             Requested size: 401.49536pt x 200.75122pt.
+ [21<../imgs/cuadrantes2.pdf>]
+LaTeX Info: Redefining \. on input line 366.
+LaTeX Info: Redefining \% on input line 366.
  [22
 
 ]
+Capítulo 7.
+
+LaTeX Warning: Reference `anexo' on page 23 undefined on input line 368.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ...n un indice de especialización mayor que #
+                                                  ## y un índice de depende...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ... un indice de especialización mayor que ##
+                                                  # y un índice de dependec...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ...un indice de especialización mayor que ###
+                                                   y un índice de dependeci...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ... ### y un índice de dependecia mayor que #
+                                                  ##.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ...### y un índice de dependecia mayor que ##
+                                                  #.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
+l.370 ...## y un índice de dependecia mayor que ###
+                                                  .
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+<../imgs/cuadrantes.pdf, id=447, 1084.05pt x 1228.59pt>
+File: ../imgs/cuadrantes.pdf Graphic file (type pdf)
+ <use ../imgs/cuadrantes.pdf>
+Package luatex.def Info: ../imgs/cuadrantes.pdf used on input line 376.
+(luatex.def)             Requested size: 451.68228pt x 511.89874pt.
+
+Overfull \hbox (24.89093pt too wide) in paragraph at lines 376--377
+ [][] 
+ []
+
+./chipre.tex:407: Extra alignment tab has been changed to \cr.
+<template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
+                                                  
+l.407     }
+         
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<../imgs/esp_c2.pdf, id=448, 289.08pt x 289.08pt>
+File: ../imgs/esp_c2.pdf Graphic file (type pdf)
+ <use ../imgs/esp_c2.pdf>
+Package luatex.def Info: ../imgs/esp_c2.pdf used on input line 414.
+(luatex.def)             Requested size: 250.9346pt x 250.93295pt.
+
+./chipre.tex:441: Extra alignment tab has been changed to \cr.
+<template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
+                                                  
+l.441     }
+         
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<../imgs/esp_c3.pdf, id=449, 289.08pt x 722.7pt>
+File: ../imgs/esp_c3.pdf Graphic file (type pdf)
+ <use ../imgs/esp_c3.pdf>
+Package luatex.def Info: ../imgs/esp_c3.pdf used on input line 448.
+(luatex.def)             Requested size: 250.9346pt x 627.3324pt.
+
+./chipre.tex:469: Extra alignment tab has been changed to \cr.
+<template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
+                                                  
+l.469     }
+         
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<../imgs/esp_c4.pdf, id=450, 289.08pt x 578.16pt>
+File: ../imgs/esp_c4.pdf Graphic file (type pdf)
+ <use ../imgs/esp_c4.pdf>
+Package luatex.def Info: ../imgs/esp_c4.pdf used on input line 476.
+(luatex.def)             Requested size: 250.9346pt x 501.86592pt.
+ [23]
+LaTeX Info: Redefining \. on input line 481.
+LaTeX Info: Redefining \% on input line 481.
+ [24] [25<../imgs/cuadrantes.pdf>]
+LaTeX Info: Redefining \. on input line 481.
+LaTeX Info: Redefining \% on input line 481.
+ [26<../imgs/esp_c2.pdf>] [27<../imgs/esp_c3.pdf>]
+LaTeX Info: Redefining \. on input line 481.
+LaTeX Info: Redefining \% on input line 481.
+ [28<../imgs/esp_c4.pdf>]
+Capítulo 8.
+[29
+
+]
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
+ [30
+
+]
 Capítulo 9.
-[23]
-LaTeX Info: Redefining \. on input line 397.
-LaTeX Info: Redefining \% on input line 397.
- [24
+[31]
+LaTeX Info: Redefining \. on input line 487.
+LaTeX Info: Redefining \% on input line 487.
+ [32
 
 ]
 Capítulo 10.
-[25]
-LaTeX Info: Redefining \. on input line 462.
-LaTeX Info: Redefining \% on input line 462.
- [26] (./chipre.bbl
+[33]
+LaTeX Info: Redefining \. on input line 561.
+LaTeX Info: Redefining \% on input line 561.
+ [34]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 592.
+
+[35]
+LaTeX Info: Redefining \. on input line 705.
+LaTeX Info: Redefining \% on input line 705.
+ [36] (./chipre.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [27
+)
+
+./chipre.tex:711: LaTeX Error: \begin{enumerate} on input line 136 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.711 \end{document}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[37
 
 
 ] (./chipre.aux
@@ -1067,28 +1219,30 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 )
-(\end occurred inside a group at level 1)
+(\end occurred inside a group at level 3)
 
+### semi simple group (level 3) entered at line 136 (\begingroup)
+### semi simple group (level 2) entered at line 107 (\begingroup)
 ### semi simple group (level 1) entered at line 36 (\begingroup)
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 18808 strings out of 495119
- 100000,383344 words of node,token memory allocated
- 1867 words of node memory still in use:
-   8 hlist, 2 vlist, 3 rule, 169 glue, 1 kern, 57 attribute, 54 glue_spec, 57 attribute_list, 1 write nodes
-   avail lists: 2:1491,3:124,4:18,5:90,6:4002,7:2552,8:165,9:667,10:12,11:283
- 21733 multiletter control sequences out of 65536+600000
- 51 fonts using 9258935 bytes
- 38i,14n,62p,952b,1519s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Library/Fonts/Times New Roman Italic.ttf></Library/Fonts/Times New Roman Bold.ttf></Library/Fonts/Times New Roman.ttf></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on chipre.pdf (27 pages, 925071 bytes).
+ 18883 strings out of 495119
+ 195334,460012 words of node,token memory allocated
+ 2237 words of node memory still in use:
+   8 hlist, 2 vlist, 3 rule, 209 glue, 1 kern, 67 attribute, 62 glue_spec, 67 attribute_list, 2 shape, 1 write nodes
+   avail lists: 2:1502,3:148,4:23,5:323,6:15573,7:3904,8:221,9:786,10:14,11:2769
+ 21763 multiletter control sequences out of 65536+600000
+ 53 fonts using 10373495 bytes
+ 38i,14n,62p,952b,1682s stack positions out of 5000i,500n,10000p,200000b,100000s
+</Library/Fonts/Times New Roman Italic.ttf></Library/Fonts/Times New Roman Bold.ttf></Library/Fonts/Times New Roman.ttf></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on chipre.pdf (37 pages, 1209312 bytes).
 
-PDF statistics: 546 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+PDF statistics: 736 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

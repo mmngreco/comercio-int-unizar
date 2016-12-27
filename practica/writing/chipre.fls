@@ -170,9 +170,9 @@ INPUT ../imgs/logo_fecem.eps
 INPUT ../imgs/logo_fecem-eps-converted-to.pdf
 INPUT ../imgs/logo_fecem-eps-converted-to.pdf
 OUTPUT chipre.pdf
-INPUT ../imgs/mapa.eps
-INPUT ../imgs/mapa-eps-converted-to.pdf
-INPUT ../imgs/mapa-eps-converted-to.pdf
+INPUT ../imgs/mapa.pdf
+INPUT ../imgs/mapa.pdf
+INPUT ../imgs/mapa.pdf
 INPUT ../imgs/mapa_distritos.png
 INPUT ../imgs/mapa_distritos.png
 INPUT ../imgs/mapa_distritos.png
@@ -197,9 +197,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT ../imgs/rri_0.eps
-INPUT ../imgs/rri_0-eps-converted-to.pdf
-INPUT ../imgs/rri_0-eps-converted-to.pdf
+INPUT ../imgs/rri_0.pdf
+INPUT ../imgs/rri_0.pdf
+INPUT ../imgs/rri_0.pdf
 INPUT ../imgs/ev_nominal.pdf
 INPUT ../imgs/ev_nominal.pdf
 INPUT ../imgs/ev_nominal.pdf
@@ -224,6 +224,15 @@ INPUT ../imgs/cuadrantes2.pdf
 INPUT ../imgs/cuadrantes.pdf
 INPUT ../imgs/cuadrantes.pdf
 INPUT ../imgs/cuadrantes.pdf
+INPUT ../imgs/esp_c2.pdf
+INPUT ../imgs/esp_c2.pdf
+INPUT ../imgs/esp_c2.pdf
+INPUT ../imgs/esp_c3.pdf
+INPUT ../imgs/esp_c3.pdf
+INPUT ../imgs/esp_c3.pdf
+INPUT ../imgs/esp_c4.pdf
+INPUT ../imgs/esp_c4.pdf
+INPUT ../imgs/esp_c4.pdf
 INPUT ./chipre.bbl
 INPUT ./chipre.bbl
 INPUT ./chipre.aux
@@ -234,3 +243,4 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
