@@ -23,8 +23,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/babel/luababel.def
@@ -200,12 +198,15 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT ../imgs/rri_0.pdf
 INPUT ../imgs/rri_0.pdf
 INPUT ../imgs/rri_0.pdf
-INPUT ../imgs/ev_nominal.pdf
-INPUT ../imgs/ev_nominal.pdf
-INPUT ../imgs/ev_nominal.pdf
 INPUT ../imgs/ev_m.eps
 INPUT ../imgs/ev_m-eps-converted-to.pdf
 INPUT ../imgs/ev_m-eps-converted-to.pdf
+INPUT ../imgs/disp_x.png
+INPUT ../imgs/disp_x.png
+INPUT ../imgs/disp_x.png
+INPUT ../imgs/disp_m.png
+INPUT ../imgs/disp_m.png
+INPUT ../imgs/disp_m.png
 INPUT ../imgs/pie_mgeo.pdf
 INPUT ../imgs/pie_mgeo.pdf
 INPUT ../imgs/pie_mgeo.pdf
@@ -235,6 +236,9 @@ INPUT ../imgs/esp_c4.pdf
 INPUT ../imgs/esp_c4.pdf
 INPUT ./chipre.bbl
 INPUT ./chipre.bbl
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmtt.fd
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmtt.fd
+INPUT /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc
 INPUT ./chipre.aux
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
@@ -243,4 +247,3 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

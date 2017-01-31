@@ -12,6 +12,10 @@
 
 ---
 
+### DUDA
+
+La tasa de cobertura sobre datos reales o corrientes??
+
 
 ## TEMA 1
 

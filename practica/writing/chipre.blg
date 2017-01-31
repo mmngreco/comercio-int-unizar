@@ -2,47 +2,56 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chipre.aux
 The style file: apalike.bst
-I found no \citation commands---while reading file chipre.aux
-Database file #1: biblio.bib.bib
-You've used 0 entries,
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "ChipreWi15:online"
+Warning--I didn't find a database entry for "ICEXEspa12:online"
+Warning--I didn't find a database entry for "ChipreWi33"
+Warning--to sort, need author or key in ICEXEspa16:online
+Warning--empty year in ICEXEspa16:online
+Warning--empty year in ICEXChipre18:online
+Warning--empty year in ICEXChipre96:online
+Warning--empty year in ICEXEspa63:online
+Warning--empty year in ICEXchipreGrupos:online
+Warning--empty year in OMCExamen
+You've used 7 entries,
             1935 wiz_defined-function locations,
-            471 strings with 3674 characters,
-and the built_in function-call counts, 17 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 1
+            508 strings with 5801 characters,
+and the built_in function-call counts, 1815 in all, are:
+= -- 192
+> -- 53
+< -- 5
++ -- 19
+- -- 16
+* -- 105
+:= -- 348
+add.period$ -- 25
+call.type$ -- 7
+change.case$ -- 42
+chr.to.int$ -- 4
+cite$ -- 15
+duplicate$ -- 74
+empty$ -- 117
+format.name$ -- 22
+if$ -- 341
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 2
+newline$ -- 42
+num.names$ -- 18
+pop$ -- 37
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 43
 quote$ -- 0
-skip$ -- 1
+skip$ -- 50
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 85
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 40
+warning$ -- 7
+while$ -- 12
 width$ -- 0
-write$ -- 2
-(There was 1 error message)
+write$ -- 88
+(There were 10 warnings)

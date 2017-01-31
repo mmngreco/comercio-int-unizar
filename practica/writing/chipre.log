@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  24 DEC 2016 15:58
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.6.28)  9 JAN 2017 02:19
  restricted system commands enabled.
  file:line:error style messages enabled.
 **chipre.tex
@@ -46,12 +46,6 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip43
-\bibsep=\skip44
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count89
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
  (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/luababel.def
@@ -141,17 +135,17 @@ Package: babel 2016/04/23 3.9r The Babel package
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
  (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count90
+\babel@savecnt=\count89
 \U@D=\dimen105
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/luababel.def))
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/luababel.def))
 \es@quottoks=\toks15
-\es@quotdepth=\count91
+\es@quotdepth=\count90
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
- (/usr/local/texlive/2016/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex UTF-8 Spanish hyphenation patterns (/usr/local/texlive/2016/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex)))) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex UTF-8 Spanish hyphenation patterns (/usr/local/texlive/2016/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex)))) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen106
 \epsfysize=\dimen107
@@ -160,14 +154,14 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count92
-\rotFPtop=\skip45
-\rotFPbot=\skip46
+\c@r@tfl@t=\count91
+\rotFPtop=\skip43
+\rotFPbot=\skip44
 \rot@float@box=\box26
 \rot@mess@toks=\toks16
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
-\@mathmargin=\skip47
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -182,13 +176,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count92
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count93
+\leftroot@=\count94
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count95
+\DOTSCASE@=\count96
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -197,15 +191,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen110
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
 \tag@help=\toks18
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
 \andhelp@=\toks19
 \eqnshift@=\dimen111
 \alignsep@=\dimen112
@@ -214,8 +208,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \totwidth@=\dimen115
 \lineht@=\dimen116
 \@envbody=\toks20
-\multlinegap=\skip48
-\multlinetaggap=\skip49
+\multlinegap=\skip46
+\multlinetaggap=\skip47
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
@@ -224,8 +218,8 @@ slashbox style by K.Yasuoka, May 1993.
 \@slashboxa=\box29
 \@slashboxb=\box30
 \@slashboxc=\box31
-\@slashboxwd=\count105
-\@slashboxht=\count106
+\@slashboxwd=\count104
+\@slashboxht=\count105
 \@slashsepl=\dimen117
 \@slashsepr=\dimen118
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
@@ -243,8 +237,8 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen119
 \extrarowheight=\dimen120
 \NC@list=\toks22
-\extratabsurround=\skip50
-\backup@length=\skip51
+\extratabsurround=\skip48
+\backup@length=\skip49
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen121
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
@@ -267,24 +261,24 @@ L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
 L3 Module: l3str 2016/03/24 v6441 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/03/24 v6441 L3 Integers
-\c_max_int=\count107
-\l_tmpa_int=\count108
-\l_tmpb_int=\count109
-\g_tmpa_int=\count110
-\g_tmpb_int=\count111
+\c_max_int=\count106
+\l_tmpa_int=\count107
+\l_tmpb_int=\count108
+\g_tmpa_int=\count109
+\g_tmpb_int=\count110
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count112
+\g__prg_map_int=\count111
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2016/03/26 v6464 L3 Messages
 L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
-\l_iow_line_count_int=\count113
-\l__iow_target_count_int=\count114
-\l__iow_current_line_int=\count115
-\l__iow_current_word_int=\count116
-\l__iow_current_indentation_int=\count117
+\l_iow_line_count_int=\count112
+\l__iow_target_count_int=\count113
+\l__iow_current_line_int=\count114
+\l__iow_current_word_int=\count115
+\l__iow_current_indentation_int=\count116
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \c_zero_dim=\dimen122
 \c_max_dim=\dimen123
@@ -292,12 +286,12 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \l_tmpb_dim=\dimen125
 \g_tmpa_dim=\dimen126
 \g_tmpb_dim=\dimen127
-\c_zero_skip=\skip52
-\c_max_skip=\skip53
-\l_tmpa_skip=\skip54
-\l_tmpb_skip=\skip55
-\g_tmpa_skip=\skip56
-\g_tmpb_skip=\skip57
+\c_zero_skip=\skip50
+\c_max_skip=\skip51
+\l_tmpa_skip=\skip52
+\l_tmpb_skip=\skip53
+\g_tmpa_skip=\skip54
+\g_tmpb_skip=\skip55
 \c_zero_muskip=\muskip12
 \c_max_muskip=\muskip13
 \l_tmpa_muskip=\muskip14
@@ -305,18 +299,18 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count118
-\l_keys_choice_int=\count119
+\g__keyval_level_int=\count117
+\l_keys_choice_int=\count118
 L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
-\c__fp_leading_shift_int=\count120
-\c__fp_middle_shift_int=\count121
-\c__fp_trailing_shift_int=\count122
-\c__fp_big_leading_shift_int=\count123
-\c__fp_big_middle_shift_int=\count124
-\c__fp_big_trailing_shift_int=\count125
-\c__fp_Bigg_leading_shift_int=\count126
-\c__fp_Bigg_middle_shift_int=\count127
-\c__fp_Bigg_trailing_shift_int=\count128
+\c__fp_leading_shift_int=\count119
+\c__fp_middle_shift_int=\count120
+\c__fp_trailing_shift_int=\count121
+\c__fp_big_leading_shift_int=\count122
+\c__fp_big_middle_shift_int=\count123
+\c__fp_big_trailing_shift_int=\count124
+\c__fp_Bigg_leading_shift_int=\count125
+\c__fp_Bigg_middle_shift_int=\count126
+\c__fp_Bigg_trailing_shift_int=\count127
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box32
 \l_tmpa_box=\box33
@@ -365,15 +359,15 @@ L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
 L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count129
+\l__driver_color_stack_int=\count128
 \l__driver_tmp_box=\box47
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count130
-\l__xparse_m_args_int=\count131
-\l__xparse_mandatory_args_int=\count132
-\l__xparse_processor_int=\count133
-\l__xparse_v_nesting_int=\count134
+\l__xparse_current_arg_int=\count129
+\l__xparse_m_args_int=\count130
+\l__xparse_mandatory_args_int=\count131
+\l__xparse_processor_int=\count132
+\l__xparse_v_nesting_int=\count133
 )
 Package: fontspec 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2016/texmf-dist/tex/luatex/luaotfload/luaotfload.sty
@@ -397,12 +391,12 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.279 seconds)
+luaotfload | main : initialization completed in 0.234 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX. (/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
-\l_fontspec_script_int=\count135
-\l_fontspec_language_int=\count136
-\l_fontspec_strnum_int=\count137
+\l_fontspec_script_int=\count134
+\l_fontspec_language_int=\count135
+\l_fontspec_strnum_int=\count136
 \l__fontspec_tmpa_dim=\dimen153
 \l__fontspec_tmpb_dim=\dimen154
 \l__fontspec_tmpc_dim=\dimen155
@@ -426,7 +420,7 @@ LaTeX Font Info:    Try loading font information for EU2+lmss on input line 357.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmss.fd
 File: eu2lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmsans12-regular.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmsans12-regular.luc))
-\tipaTiiicode=\count138
+\tipaTiiicode=\count137
 \tipasavetokens=\toks23
 \tipachecktokens=\toks24
 )
@@ -535,15 +529,15 @@ File: eu2lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 . 
 . Defining command \DeclareFontsExtensions with sig. 'm' on line 603.
 .................................................
-\l__fontspec_tmp_int=\count139
+\l__fontspec_tmp_int=\count138
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec.cfg)
 LaTeX Info: Redefining \itshape on input line 2629.
 LaTeX Info: Redefining \slshape on input line 2634.
 LaTeX Info: Redefining \scshape on input line 2639.
 LaTeX Info: Redefining \upshape on input line 2644.
-\l__fontspec_em_int=\count140
-\l__fontspec_emdef_int=\count141
+\l__fontspec_em_int=\count139
+\l__fontspec_emdef_int=\count140
 LaTeX Info: Redefining \em on input line 2660.
 LaTeX Info: Redefining \emph on input line 2666.
 LaTeX Info: Redefining \- on input line 2670.
@@ -569,12 +563,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen163
 \cmidrulekern=\dimen164
 \defaultaddspace=\dimen165
-\@cmidla=\count142
-\@cmidlb=\count143
+\@cmidla=\count141
+\@cmidlb=\count142
 \@aboverulesep=\dimen166
 \@belowrulesep=\dimen167
-\@thisruleclass=\count144
-\@lastruleclass=\count145
+\@thisruleclass=\count143
+\@lastruleclass=\count144
 \@thisrulewidth=\dimen168
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -586,9 +580,9 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count146
-\Gm@cntv=\count147
-\c@Gm@tempcnt=\count148
+\Gm@cnth=\count145
+\Gm@cntv=\count146
+\c@Gm@tempcnt=\count147
 \Gm@bindingoffset=\dimen169
 \Gm@wd@mp=\dimen170
 \Gm@odd@mp=\dimen171
@@ -615,11 +609,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen182
 \caption@hangindent=\dimen183
 )
-\c@ContinuedFloat=\count149
+\c@ContinuedFloat=\count148
 Package caption Info: rotating package is loaded.
 )
 luaotfload | cache : Lookup cache loaded from /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman.luc)
-\g__fontspec_family_TimesNewRoman_int=\count150
+\g__fontspec_family_TimesNewRoman_int=\count149
 (compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold-italic.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold-italic.luc)(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-bold.luc)(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-italic.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-italic.luc)
 luaotfload | aux : font no 22 (<unknown>) does not define feature smcp for script latn with language dflt
 luaotfload | aux : no font with id 22
@@ -650,6 +644,12 @@ luaotfload | aux : no font with id 23
  (./chipre.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
 )
 \openout1 = chipre.aux
 
@@ -675,16 +675,16 @@ File: t3cmr.fd 2001/12/31 TIPA font definitions
 LaTeX Font Info:    ... okay on input line 37.
  (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
+\scratchcounter=\count150
 \scratchdimen=\dimen184
 \scratchbox=\box48
-\nofMPsegments=\count152
-\nofMParguments=\count153
+\nofMPsegments=\count151
+\nofMParguments=\count152
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count154
+\MPscratchCnt=\count153
 \MPscratchDim=\dimen185
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
+\MPnumerator=\count154
+\makeMPintoPDFobject=\count155
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -822,12 +822,12 @@ Package epstopdf Info: Source file: <../imgs/logo_uz.eps>
 (epstopdf)                    date: 2016-10-10 18:10:56
 (epstopdf)                    size: 28766 bytes
 (epstopdf)             Command: <repstopdf --outfile=../imgs/logo_uz-eps-converted-to.pdf ../imgs/logo_uz.eps>
-(epstopdf)             \includegraphics on input line 45.
+(epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
 <../imgs/logo_uz-eps-converted-to.pdf, id=1, 771.88374pt x 245.91875pt>
 File: ../imgs/logo_uz-eps-converted-to.pdf Graphic file (type pdf)
  <use ../imgs/logo_uz-eps-converted-to.pdf>
-Package luatex.def Info: ../imgs/logo_uz-eps-converted-to.pdf used on input line 45.
+Package luatex.def Info: ../imgs/logo_uz-eps-converted-to.pdf used on input line 47.
 (luatex.def)             Requested size: 178.6131pt x 56.9055pt.
 Package epstopdf Info: Source file: <../imgs/logo_fecem.eps>
 (epstopdf)                    date: 2016-09-21 11:28:21
@@ -836,20 +836,17 @@ Package epstopdf Info: Source file: <../imgs/logo_fecem.eps>
 (epstopdf)                    date: 2016-10-10 18:10:57
 (epstopdf)                    size: 159309 bytes
 (epstopdf)             Command: <repstopdf --outfile=../imgs/logo_fecem-eps-converted-to.pdf ../imgs/logo_fecem.eps>
-(epstopdf)             \includegraphics on input line 47.
+(epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
  <../imgs/logo_fecem-eps-converted-to.pdf, id=2, 1606.0pt x 472.76625pt>
 File: ../imgs/logo_fecem-eps-converted-to.pdf Graphic file (type pdf)
  <use ../imgs/logo_fecem-eps-converted-to.pdf>
-Package luatex.def Info: ../imgs/logo_fecem-eps-converted-to.pdf used on input line 47.
+Package luatex.def Info: ../imgs/logo_fecem-eps-converted-to.pdf used on input line 49.
 (luatex.def)             Requested size: 193.29982pt x 56.9055pt.
  [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<../imgs/logo_uz-eps-converted-to.pdf><../imgs/logo_fecem-eps-converted-to.pdf>]
-LaTeX Font Info:    Font shape `EU2/TimesNewRoman(0)/m/sl' in size <12> not available
-(Font)              Font shape `EU2/TimesNewRoman(0)/m/it' tried instead on input line 84.
- [2
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<../imgs/logo_uz-eps-converted-to.pdf><../imgs/logo_fecem-eps-converted-to.pdf>] [2
 
 ]
 Capítulo 1.
@@ -859,53 +856,64 @@ File: ../imgs/mapa.pdf Graphic file (type pdf)
 Package luatex.def Info: ../imgs/mapa.pdf used on input line 94.
 (luatex.def)             Requested size: 256.0748pt x 332.90192pt.
 
+
+LaTeX Warning: Citation `ChipreWi15:online' on page 3 undefined on input line 101.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3<../imgs/mapa.pdf>] <../imgs/mapa_distritos.png, id=45, 642.4pt x 390.45876pt>
+ [3<../imgs/mapa.pdf>]
+
+LaTeX Warning: Citation `ICEXEspa12:online' on page 4 undefined on input line 103.
+
+<../imgs/mapa_distritos.png, id=45, 642.4pt x 390.45876pt>
 File: ../imgs/mapa_distritos.png Graphic file (type png)
  <use ../imgs/mapa_distritos.png>
-Package luatex.def Info: ../imgs/mapa_distritos.png used on input line 127.
+Package luatex.def Info: ../imgs/mapa_distritos.png used on input line 126.
 (luatex.def)             Requested size: 256.0748pt x 155.65047pt.
-LaTeX Info: Redefining \. on input line 148.
-LaTeX Info: Redefining \% on input line 148.
- [4]
-LaTeX Info: Redefining \. on input line 169.
-LaTeX Info: Redefining \% on input line 169.
- [5<../imgs/mapa_distritos.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 175.
+
+
+LaTeX Warning: Citation `ChipreWi33' on page 4 undefined on input line 127.
+
+
+LaTeX Warning: Citation `ChipreWi33' on page 4 undefined on input line 127.
+
+[4]
+Overfull \hbox (80.23178pt too wide) in paragraph at lines 168--169
+[]\EU2/TimesNewRoman(0)/m/n/12 La Or-ga-ni-za-ción pa-ra la Se-gu-ri-dad y la Coope-ra-ción en Eu-ro-pa (O.S.C.E.) (1975).                                
+ []
+
+[5<../imgs/mapa_distritos.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 180.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 175.
+LaTeX Font Info:    Try loading font information for U+msb on input line 180.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) <../imgs/rri_0.pdf, id=53, 722.7pt x 361.35pt>
+) [6] [7]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 254.
+
+<../imgs/rri_0.pdf, id=59, 722.7pt x 361.35pt>
 File: ../imgs/rri_0.pdf Graphic file (type pdf)
  <use ../imgs/rri_0.pdf>
-Package luatex.def Info: ../imgs/rri_0.pdf used on input line 180.
+Package luatex.def Info: ../imgs/rri_0.pdf used on input line 277.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
- [6<../imgs/rri_0.pdf>]
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
- [7]
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
- [8
+ [8] [9<../imgs/rri_0.pdf>] [10
 
 ]
 Capítulo 2.
-<../imgs/ev_nominal.pdf, id=104, 578.16pt x 433.62pt>
-File: ../imgs/ev_nominal.pdf Graphic file (type pdf)
- <use ../imgs/ev_nominal.pdf>
-Package luatex.def Info: ../imgs/ev_nominal.pdf used on input line 229.
-(luatex.def)             Requested size: 301.12152pt x 225.84099pt.
- [9<../imgs/ev_nominal.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 240.
+               Default added (so using `tbp') on input line 292.
 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 323.
+
+[11]
 Package epstopdf Info: Source file: <../imgs/ev_m.eps>
 (epstopdf)                    date: 2016-10-18 17:30:15
 (epstopdf)                    size: 32833 bytes
@@ -913,336 +921,561 @@ Package epstopdf Info: Source file: <../imgs/ev_m.eps>
 (epstopdf)                    date: 2016-10-13 17:42:34
 (epstopdf)                    size: 29598 bytes
 (epstopdf)             Command: <repstopdf --outfile=../imgs/ev_m-eps-converted-to.pdf ../imgs/ev_m.eps>
-(epstopdf)             \includegraphics on input line 283.
+(epstopdf)             \includegraphics on input line 366.
 system(repstopdf --outfile=../imgs/ev_m-eps-converted-to.pdf ../imgs/ev_m.eps) executed.
 Package epstopdf Info: Result file: <../imgs/ev_m-eps-converted-to.pdf>
 (epstopdf)                    date: 2016-10-13 17:42:34
 (epstopdf)                    size: 29598 bytes.
-<../imgs/ev_m-eps-converted-to.pdf, id=152, 722.7pt x 361.35pt>
+ <../imgs/ev_m-eps-converted-to.pdf, id=114, 722.7pt x 361.35pt>
 File: ../imgs/ev_m-eps-converted-to.pdf Graphic file (type pdf)
  <use ../imgs/ev_m-eps-converted-to.pdf>
-Package luatex.def Info: ../imgs/ev_m-eps-converted-to.pdf used on input line 283.
+Package luatex.def Info: ../imgs/ev_m-eps-converted-to.pdf used on input line 366.
 (luatex.def)             Requested size: 301.12152pt x 150.55846pt.
-LaTeX Info: Redefining \. on input line 288.
-LaTeX Info: Redefining \% on input line 288.
- [10<../imgs/ev_m-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 288.
-LaTeX Info: Redefining \% on input line 288.
- [11]
-LaTeX Info: Redefining \. on input line 288.
-LaTeX Info: Redefining \% on input line 288.
- [12]
+
+
+./chipre.tex:373: LaTeX Error: File `ev_x' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.373     \includegraphics[width=300px]{ev_x}
+                                           
+I could not locate the file with any of these extensions:
+.pdf,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<../imgs/disp_x.png, id=115, 525.965pt x 471.7625pt>
+File: ../imgs/disp_x.png Graphic file (type png)
+ <use ../imgs/disp_x.png>
+Package luatex.def Info: ../imgs/disp_x.png used on input line 380.
+(luatex.def)             Requested size: 301.12152pt x 270.10236pt.
+ <../imgs/disp_m.png, id=116, 515.9275pt x 527.9725pt>
+File: ../imgs/disp_m.png Graphic file (type png)
+ <use ../imgs/disp_m.png>
+Package luatex.def Info: ../imgs/disp_m.png used on input line 387.
+(luatex.def)             Requested size: 301.12152pt x 308.15775pt.
+ [12<../imgs/ev_m-eps-converted-to.pdf>] [13<../imgs/disp_x.png>] [14<../imgs/disp_m.png>]
 Capítulo 3.
-<../imgs/pie_mgeo.pdf, id=210, 722.7pt x 361.35pt>
+<../imgs/pie_mgeo.pdf, id=175, 722.7pt x 361.35pt>
 File: ../imgs/pie_mgeo.pdf Graphic file (type pdf)
  <use ../imgs/pie_mgeo.pdf>
-Package luatex.def Info: ../imgs/pie_mgeo.pdf used on input line 298.
+Package luatex.def Info: ../imgs/pie_mgeo.pdf used on input line 407.
 (luatex.def)             Requested size: 351.30844pt x 175.65152pt.
- <../imgs/bar_mgeo.pdf, id=211, 722.7pt x 433.62pt>
+ <../imgs/bar_mgeo.pdf, id=176, 722.7pt x 433.62pt>
 File: ../imgs/bar_mgeo.pdf Graphic file (type pdf)
  <use ../imgs/bar_mgeo.pdf>
-Package luatex.def Info: ../imgs/bar_mgeo.pdf used on input line 306.
+Package luatex.def Info: ../imgs/bar_mgeo.pdf used on input line 415.
 (luatex.def)             Requested size: 351.30844pt x 210.78183pt.
- [13
+ [15
 
-<../imgs/pie_mgeo.pdf>] <../imgs/pie_xgeo.pdf, id=257, 722.7pt x 361.35pt>
+<../imgs/pie_mgeo.pdf>] <../imgs/pie_xgeo.pdf, id=222, 722.7pt x 361.35pt>
 File: ../imgs/pie_xgeo.pdf Graphic file (type pdf)
  <use ../imgs/pie_xgeo.pdf>
-Package luatex.def Info: ../imgs/pie_xgeo.pdf used on input line 317.
+Package luatex.def Info: ../imgs/pie_xgeo.pdf used on input line 428.
 (luatex.def)             Requested size: 351.30844pt x 175.65152pt.
- <../imgs/bar_xgeo.pdf, id=258, 722.7pt x 433.62pt>
+ <../imgs/bar_xgeo.pdf, id=223, 722.7pt x 433.62pt>
 File: ../imgs/bar_xgeo.pdf Graphic file (type pdf)
  <use ../imgs/bar_xgeo.pdf>
-Package luatex.def Info: ../imgs/bar_xgeo.pdf used on input line 325.
+Package luatex.def Info: ../imgs/bar_xgeo.pdf used on input line 436.
 (luatex.def)             Requested size: 351.30844pt x 210.78183pt.
-LaTeX Info: Redefining \. on input line 333.
-LaTeX Info: Redefining \% on input line 333.
- [14<../imgs/bar_mgeo.pdf><../imgs/pie_xgeo.pdf>]
-./chipre.tex:342: Double subscript.
-l.342 dónde, $T_i_
+ [16<../imgs/bar_mgeo.pdf><../imgs/pie_xgeo.pdf>]
+./chipre.tex:453: Double subscript.
+l.453 dónde, $T_i_
                  j$ es el valor del comercio entre el país _i_ y el país _...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./chipre.tex:342: Missing $ inserted.
+./chipre.tex:453: Missing $ inserted.
 <inserted text> 
 $
-l.342 ...$ es el valor del comercio entre el país _
+l.453 ...$ es el valor del comercio entre el país _
                                                   i_ y el país _j_, $Y_i^a$...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chipre.tex:342: Double subscript.
-l.342 ...es el valor del comercio entre el país _i_
+./chipre.tex:453: Double subscript.
+l.453 ...es el valor del comercio entre el país _i_
                                                    y el país _j_, $Y_i^a$ e...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./chipre.tex:342: Double subscript.
-l.342 ... comercio entre el país _i_ y el país _j_
+./chipre.tex:453: Double subscript.
+l.453 ... comercio entre el país _i_ y el país _j_
                                                   , $Y_i^a$ es el PIB del pa...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 Missing character: There is no í (U+00ED) in font cmmi12!
 Missing character: There is no í (U+00ED) in font cmmi12!
-./chipre.tex:342: Missing $ inserted.
+./chipre.tex:453: Missing $ inserted.
 <inserted text> 
 $
-l.342 ...rcio entre el país _i_ y el país _j_, $Y_
+l.453 ...rcio entre el país _i_ y el país _j_, $Y_
                                                   i^a$ es el PIB del país _...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chipre.tex:342: Missing $ inserted.
+./chipre.tex:453: Missing $ inserted.
 <inserted text> 
 $
-l.342 ...el país _j_, $Y_i^a$ es el PIB del país _
+l.453 ...el país _j_, $Y_i^a$ es el PIB del país _
                                                   i_, $Y_j^b$ es el PIB del ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chipre.tex:342: Double subscript.
-l.342 ... país _j_, $Y_i^a$ es el PIB del país _i_
+./chipre.tex:453: Double subscript.
+l.453 ... país _j_, $Y_i^a$ es el PIB del país _i_
                                                   , $Y_j^b$ es el PIB del pa...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./chipre.tex:342: Missing $ inserted.
+./chipre.tex:453: Missing $ inserted.
 <inserted text> 
 $
-l.342 ...s _j_, $Y_i^a$ es el PIB del país _i_, $Y_
+l.453 ...s _j_, $Y_i^a$ es el PIB del país _i_, $Y_
                                                   j^b$ es el PIB del país j...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chipre.tex:342: Double subscript.
-l.342 ... _i_, $Y_j^b$ es el PIB del país j y $D_i_
+./chipre.tex:453: Double subscript.
+l.453 ... _i_, $Y_j^b$ es el PIB del país j y $D_i_
                                                   j$ es la distancia entre l...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-[15<../imgs/bar_xgeo.pdf>]
-LaTeX Info: Redefining \. on input line 346.
-LaTeX Info: Redefining \% on input line 346.
- [16
+[17<../imgs/bar_xgeo.pdf>] [18
 
 ]
 Capítulo 4.
-[17]
-LaTeX Info: Redefining \. on input line 349.
-LaTeX Info: Redefining \% on input line 349.
- [18
+
+./chipre.tex:494: LaTeX Error: File `/path/to/figure' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.494     \includegraphics{/path/to/figure}
+                                         
+I could not locate the file with any of these extensions:
+.pdf,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[19] [20
 
 ]
 Capítulo 5.
-[19]
-LaTeX Info: Redefining \. on input line 352.
-LaTeX Info: Redefining \% on input line 352.
- [20
+[21]
 
-]
+./chipre.tex:532: LaTeX Error: File `/path/to/figure' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.532     \includegraphics{/path/to/figure}
+                                         
+I could not locate the file with any of these extensions:
+.pdf,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[22]
 Capítulo 6.
-<../imgs/cuadrantes2.pdf, id=407, 867.24pt x 433.62pt>
+[23
+
+] <../imgs/cuadrantes2.pdf, id=376, 867.24pt x 433.62pt>
 File: ../imgs/cuadrantes2.pdf Graphic file (type pdf)
  <use ../imgs/cuadrantes2.pdf>
-Package luatex.def Info: ../imgs/cuadrantes2.pdf used on input line 360.
+Package luatex.def Info: ../imgs/cuadrantes2.pdf used on input line 567.
 (luatex.def)             Requested size: 401.49536pt x 200.75122pt.
- [21<../imgs/cuadrantes2.pdf>]
-LaTeX Info: Redefining \. on input line 366.
-LaTeX Info: Redefining \% on input line 366.
- [22
-
-]
+ [24<../imgs/cuadrantes2.pdf>]
 Capítulo 7.
+./chipre.tex:579: You can't use `macro parameter character #' in horizontal mode.
+l.579 ...ce de Grubel y Lloyd, vemos que el sector #
+                                                  5 tiene un igl = 1 lo que ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-LaTeX Warning: Reference `anexo' on page 23 undefined on input line 368.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ...n un indice de especialización mayor que #
+LaTeX Warning: Reference `anexo' on page 25 undefined on input line 584.
+
+./chipre.tex:584: You can't use `macro parameter character #' in horizontal mode.
+l.584 ...l relativo y el índice de Grubel y Lloyd #
+                                                  # AÑADIR CITA, cada uno e...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:584: You can't use `macro parameter character #' in horizontal mode.
+l.584 ... relativo y el índice de Grubel y Lloyd ##
+                                                   AÑADIR CITA, cada uno en...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ...n un indice de especialización mayor que #
                                                   ## y un índice de depende...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ... un indice de especialización mayor que ##
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ... un indice de especialización mayor que ##
                                                   # y un índice de dependec...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ...un indice de especialización mayor que ###
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ...un indice de especialización mayor que ###
                                                    y un índice de dependeci...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ... ### y un índice de dependecia mayor que #
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ... ### y un índice de dependecia mayor que #
                                                   ##.
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ...### y un índice de dependecia mayor que ##
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ...### y un índice de dependecia mayor que ##
                                                   #.
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./chipre.tex:370: You can't use `macro parameter character #' in horizontal mode.
-l.370 ...## y un índice de dependecia mayor que ###
+./chipre.tex:586: You can't use `macro parameter character #' in horizontal mode.
+l.586 ...## y un índice de dependecia mayor que ###
                                                   .
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn''t ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-<../imgs/cuadrantes.pdf, id=447, 1084.05pt x 1228.59pt>
+[25
+
+] <../imgs/cuadrantes.pdf, id=415, 1084.05pt x 1228.59pt>
 File: ../imgs/cuadrantes.pdf Graphic file (type pdf)
  <use ../imgs/cuadrantes.pdf>
-Package luatex.def Info: ../imgs/cuadrantes.pdf used on input line 376.
+Package luatex.def Info: ../imgs/cuadrantes.pdf used on input line 599.
 (luatex.def)             Requested size: 451.68228pt x 511.89874pt.
 
-Overfull \hbox (24.89093pt too wide) in paragraph at lines 376--377
+Overfull \hbox (24.89093pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
-./chipre.tex:407: Extra alignment tab has been changed to \cr.
+./chipre.tex:630: Extra alignment tab has been changed to \cr.
 <template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
                                                   
-l.407     }
+l.630     }
          
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-<../imgs/esp_c2.pdf, id=448, 289.08pt x 289.08pt>
+<../imgs/esp_c2.pdf, id=416, 289.08pt x 289.08pt>
 File: ../imgs/esp_c2.pdf Graphic file (type pdf)
  <use ../imgs/esp_c2.pdf>
-Package luatex.def Info: ../imgs/esp_c2.pdf used on input line 414.
+Package luatex.def Info: ../imgs/esp_c2.pdf used on input line 637.
 (luatex.def)             Requested size: 250.9346pt x 250.93295pt.
 
-./chipre.tex:441: Extra alignment tab has been changed to \cr.
+./chipre.tex:666: Extra alignment tab has been changed to \cr.
 <template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
                                                   
-l.441     }
+l.666     }
          
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-<../imgs/esp_c3.pdf, id=449, 289.08pt x 722.7pt>
+<../imgs/esp_c3.pdf, id=417, 289.08pt x 722.7pt>
 File: ../imgs/esp_c3.pdf Graphic file (type pdf)
  <use ../imgs/esp_c3.pdf>
-Package luatex.def Info: ../imgs/esp_c3.pdf used on input line 448.
+Package luatex.def Info: ../imgs/esp_c3.pdf used on input line 673.
 (luatex.def)             Requested size: 250.9346pt x 627.3324pt.
 
-./chipre.tex:469: Extra alignment tab has been changed to \cr.
+./chipre.tex:696: Extra alignment tab has been changed to \cr.
 <template> ...il \d@llarbegin \relax \d@llarend \endtemplate 
                                                   
-l.469     }
+l.696     }
          
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-<../imgs/esp_c4.pdf, id=450, 289.08pt x 578.16pt>
+<../imgs/esp_c4.pdf, id=418, 289.08pt x 578.16pt>
 File: ../imgs/esp_c4.pdf Graphic file (type pdf)
  <use ../imgs/esp_c4.pdf>
-Package luatex.def Info: ../imgs/esp_c4.pdf used on input line 476.
+Package luatex.def Info: ../imgs/esp_c4.pdf used on input line 703.
 (luatex.def)             Requested size: 250.9346pt x 501.86592pt.
- [23]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
- [24] [25<../imgs/cuadrantes.pdf>]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
- [26<../imgs/esp_c2.pdf>] [27<../imgs/esp_c3.pdf>]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
- [28<../imgs/esp_c4.pdf>]
+ [26] [27<../imgs/cuadrantes.pdf>] [28<../imgs/esp_c2.pdf>] [29<../imgs/esp_c3.pdf>] [30<../imgs/esp_c4.pdf>]
 Capítulo 8.
-[29
+[31
 
-]
-LaTeX Info: Redefining \. on input line 483.
-LaTeX Info: Redefining \% on input line 483.
- [30
-
-]
+] [32]
 Capítulo 9.
-[31]
-LaTeX Info: Redefining \. on input line 487.
-LaTeX Info: Redefining \% on input line 487.
- [32
+[33
+
+] [34
 
 ]
 Capítulo 10.
-[33]
-LaTeX Info: Redefining \. on input line 561.
-LaTeX Info: Redefining \% on input line 561.
- [34]
+[35] [36]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 592.
+               Default added (so using `tbp') on input line 838.
 
-[35]
-LaTeX Info: Redefining \. on input line 705.
-LaTeX Info: Redefining \% on input line 705.
- [36] (./chipre.bbl
+[37] [38] (./chipre.bbl
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-)
-
-./chipre.tex:711: LaTeX Error: \begin{enumerate} on input line 136 ended by \end{document}.
+./chipre.bbl:4: LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{quoting}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.711 \end{document}
-                  
+l.4 Icex españa exportación e inversiones >>
+                                             sector exterior.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[37
+LaTeX Font Info:    Try loading font information for EU2+lmtt on input line 6.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu2lmtt.fd
+File: eu2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)(compiling luc: /usr/local/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc)(load luc: /Users/mmngreco/Library/texlive/2016/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc)
+Overfull \hbox (1.56905pt too wide) in paragraph at lines 4--8
+[]\EU2/TimesNewRoman(0)/m/n/12 Icex es-pa-ña ex-por-ta-ción e in-ver-sio-nes  sec-tor ex-te-rior.  $\EU2/lmtt/m/n/12 http://www.icex.es/icex/
+ []
+
+
+Overfull \hbox (26.84811pt too wide) in paragraph at lines 4--8
+\EU2/lmtt/m/n/12 es/navegacion-[]principal/todos-[]nuestros-[]servicios/informacion-[]de-[]mercados/
+ []
+
+
+Overfull \hbox (8.30814pt too wide) in paragraph at lines 4--8
+\EU2/lmtt/m/n/12 paises/navegacion-[]principal/el-[]pais/informacion-[]economica-[]y-[]comercial/
+ []
+
+
+./chipre.bbl:9: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \bibitem[ICEX, a]{ICEXChipre18:online}
+                                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chipre.bbl:11: LaTeX Error: \begin{document} ended by \end{quoting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...k Icex españa exportación e inversiones >>
+                                                   información del mercado.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+
+Overfull \hbox (19.37952pt too wide) in paragraph at lines 10--15
+\EU2/lmtt/m/n/12 www.icex.es/icex/es/navegacion-[]principal/todos-[]nuestros-[]servicios/
+ []
+
+
+Overfull \hbox (194.41931pt too wide) in paragraph at lines 10--15
+\EU2/lmtt/m/n/12 informacion-[]de-[]mercados/paises/navegacion-[]principal/el-[]pais/informacion-[]economica-[]y-[]comercial/
+ []
+
+
+Overfull \hbox (27.73625pt too wide) in paragraph at lines 10--15
+\EU2/lmtt/m/n/12 informacion-[]del-[]mercado/index.html?idPais=CY#0$\EU2/TimesNewRoman(0)/m/n/12 .  (Ac-ces-sed on 01/09/2017). 
+ []
+
+
+./chipre.bbl:16: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \bibitem[ICEX, b]{ICEXChipre96:online}
+                                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (92.7816pt too wide) in paragraph at lines 17--23
+\EU2/TimesNewRoman(0)/m/n/12 na-les.  $\EU2/lmtt/m/n/12 http://www.icex.es/icex/es/navegacion-[]principal/todos-[]nuestros-[]servicios/
+ []
+
+
+Overfull \hbox (194.41931pt too wide) in paragraph at lines 17--23
+\EU2/lmtt/m/n/12 informacion-[]de-[]mercados/paises/navegacion-[]principal/el-[]pais/informacion-[]economica-[]y-[]comercial/
+ []
+
+
+Overfull \hbox (9.26982pt too wide) in paragraph at lines 17--23
+\EU2/lmtt/m/n/12 relaciones-[]economicas-[]internacionales/index.html?idPais=CY#0$\EU2/TimesNewRoman(0)/m/n/12 .  (Ac-
+ []
+
+
+./chipre.bbl:24: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \bibitem[ICEX, c]{ICEXEspa63:online}
+                                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (92.7816pt too wide) in paragraph at lines 25--31
+\EU2/TimesNewRoman(0)/m/n/12 na-les.  $\EU2/lmtt/m/n/12 http://www.icex.es/icex/es/navegacion-[]principal/todos-[]nuestros-[]servicios/
+ []
+
+
+Overfull \hbox (194.41931pt too wide) in paragraph at lines 25--31
+\EU2/lmtt/m/n/12 informacion-[]de-[]mercados/paises/navegacion-[]principal/el-[]pais/informacion-[]economica-[]y-[]comercial/
+ []
+
+
+Overfull \hbox (9.26982pt too wide) in paragraph at lines 25--31
+\EU2/lmtt/m/n/12 relaciones-[]economicas-[]internacionales/index.html?idPais=CY#3$\EU2/TimesNewRoman(0)/m/n/12 .  (Ac-
+ []
+
+
+./chipre.bbl:32: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \bibitem[ICEX, d]{ICEXchipreGrupos:online}
+                                             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (39.2642pt too wide) in paragraph at lines 33--39
+\EU2/TimesNewRoman(0)/m/n/12 na-les >> gru-pos eco-nó-mi-cos.  $\EU2/lmtt/m/n/12 http://www.icex.es/icex/es/navegacion-[]principal/
+ []
+
+
+Overfull \hbox (88.35944pt too wide) in paragraph at lines 33--39
+\EU2/lmtt/m/n/12 todos-[]nuestros-[]servicios/informacion-[]de-[]mercados/paises/navegacion-[]principal/
+ []
+
+
+Overfull \hbox (107.39941pt too wide) in paragraph at lines 33--39
+\EU2/lmtt/m/n/12 el-[]pais/informacion-[]economica-[]y-[]comercial/relaciones-[]economicas-[]internacionales/
+ []
+
+
+./chipre.bbl:40: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...gman et~al., 2015]{krugman2015international}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./chipre.bbl:45: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 \bibitem[OMC, ]{OMCExamen}
+                             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (24.54752pt too wide) in paragraph at lines 46--50
+\EU2/lmtt/m/n/12 Pages/FE_Search/FE_S_S009-[]DP.aspx?language=S&CatalogueIdList=37532&
+ []
+
+
+Overfull \hbox (92.03943pt too wide) in paragraph at lines 46--50
+\EU2/lmtt/m/n/12 CurrentCatalogueIdIndex=0&FullTextHash=&HasEnglishRecord=True&HasFrenchRecord=
+ []
+
+
+./chipre.bbl:51: LaTeX Error: \begin{document} ended by \end{thebibliography}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \end{thebibliography}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./chipre.bbl:51: Extra \endgroup.
+<recently read> \endgroup 
+          
+l.51 \end{thebibliography}
+                        
+Things are pretty mixed up, but I think the worst is over.
+
+) [39
 
 
 ] (./chipre.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
 )
 
 LaTeX Warning: There were undefined references.
 
-)
-(\end occurred inside a group at level 3)
 
-### semi simple group (level 3) entered at line 136 (\begingroup)
-### semi simple group (level 2) entered at line 107 (\begingroup)
-### semi simple group (level 1) entered at line 36 (\begingroup)
-### bottom level
+LaTeX Warning: There were multiply-defined labels.
+
+)
 
 Here is how much of LuaTeX's memory you used:
- 18883 strings out of 495119
- 195334,460012 words of node,token memory allocated
- 2237 words of node memory still in use:
-   8 hlist, 2 vlist, 3 rule, 209 glue, 1 kern, 67 attribute, 62 glue_spec, 67 attribute_list, 2 shape, 1 write nodes
-   avail lists: 2:1502,3:148,4:23,5:323,6:15573,7:3904,8:221,9:786,10:14,11:2769
- 21763 multiletter control sequences out of 65536+600000
- 53 fonts using 10373495 bytes
- 38i,14n,62p,952b,1682s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Library/Fonts/Times New Roman Italic.ttf></Library/Fonts/Times New Roman Bold.ttf></Library/Fonts/Times New Roman.ttf></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on chipre.pdf (37 pages, 1209312 bytes).
+ 18672 strings out of 495119
+ 195334,383344 words of node,token memory allocated
+ 3976 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 461 glue, 1 kern, 85 attribute, 48 glue_spec, 85 attribute_list, 1 write nodes
+   avail lists: 2:1867,3:344,4:34,5:328,6:15573,7:3668,8:228,9:787,10:23,11:2769
+ 21514 multiletter control sequences out of 65536+600000
+ 54 fonts using 10499263 bytes
+ 38i,10n,62p,772b,1452s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></Library/Fonts/Times New Roman Italic.ttf></Library/Fonts/Times New Roman Bold.ttf></Library/Fonts/Times New Roman.ttf></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on chipre.pdf (39 pages, 1318895 bytes).
 
-PDF statistics: 736 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
+PDF statistics: 704 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
